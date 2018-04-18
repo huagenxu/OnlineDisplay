@@ -245,7 +245,7 @@ do_read(int pin, struct input_event_buffer* buf)
         } else {
 			for(int i=0;i<2;i++)
 			{
-		//	printf("buf->head[ %d ] is 0x%08x \n",i, buf->head[i]);	
+		//	printf("buf->head[ %d ] is 0x%08x \n",i, buf->head[i]);
 			}
 
             switch (buf->head[1]) {
@@ -333,7 +333,7 @@ int main(int argc, char *argv[])
    		h709 = new TH1F("QDC1_ch9","Small_Right1",nbinsx_mqdc, xlow_mqdc, xup_mqdc);
 */
 
-		mfile->Print();	
+		mfile->Print();
 
 	//create client socket
 		int sockfd, portno,inport,outport, n, n1, n2, n3;
@@ -359,15 +359,15 @@ int main(int argc, char *argv[])
 		if (server == NULL)
 		{
 		fprintf(stderr,"ERROR, no such host");
-		exit(0);	
+		exit(0);
 		}
 
 
 		bzero((char*)&serv_addr, sizeof(serv_addr));
 		serv_addr.sin_family = AF_INET;
 		serv_addr.sin_port = htons(portno);
-		bcopy((char *)server->h_addr, 
-		      (char *)&serv_addr.sin_addr.s_addr, 
+		bcopy((char *)server->h_addr,
+		      (char *)&serv_addr.sin_addr.s_addr,
 		      server->h_length);
 
         struct hostent *host;
@@ -380,16 +380,16 @@ int main(int argc, char *argv[])
            // inhostaddr=inet_addr(hostname);
             if (inhostaddr==-1) {
                 printf("unknown host: %s\n", hostname);
-                return 1; 
+                return 1;
               }
         }
-    
+
 	//preparation for reading data
 		int insock_l=-1, outsock_l=3;
 		char *p;
 		quiet = 0;
 		intype=intype_connect;
-		
+
 		printf("%s:%s for input;\n",argv[1],argv[2]);
 
 		signal (SIGPIPE, sigpipe);
@@ -406,7 +406,7 @@ int main(int argc, char *argv[])
 
     	num_socks=0; max_socks=0; socks=0;
 		insock = -1;
-		
+
 		ems_u32* event = 0;// (ems_u32*)malloc(8);
 
 		int count = 0;
@@ -415,7 +415,7 @@ int main(int argc, char *argv[])
 	cout<<endl;
 
 //	cout<<endl<<"Starting loop for readout data from socket and decoding"<<endl;
-		
+
 		int nfds, idx, need_data, res;
         struct timeval to, *timeout;
 
@@ -432,18 +432,18 @@ int main(int argc, char *argv[])
 					decoding(event,size);
 						/*
 						for(int i=0;i<8;i++)
-						{	
-				//		printf("event[ %d ] is 0x%08x \n",i, event[i]);	
+						{
+				//		printf("event[ %d ] is 0x%08x \n",i, event[i]);
 						}
 						for(int i=230;i<269;i++)
-						{	
-				//		printf("event[ %d ] is 0x%08x \n",i, event[i]);	
-						}	
+						{
+				//		printf("event[ %d ] is 0x%08x \n",i, event[i]);
+						}
 						*/
 			delete_old_event(event);
 			event = 0;
 
-			//	if(!event) printf("Decoding has been done, event buffer was dumped\n"); 
+			//	if(!event) printf("Decoding has been done, event buffer was dumped\n");
 				//continue;
             } else {
                 need_data=1;
@@ -464,11 +464,11 @@ int main(int argc, char *argv[])
                     gettimeofday(&now, 0);
                     if (now.tv_sec-last.tv_sec>30) {
                         last=now;
-						
+
 						if(connect(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr))<0)
 						error("ERROR connecting");
                         insock_l=sockfd; //create_connecting_socket(inhostaddr, inport);
-						
+
 						//	printf("waiting time >30, insock_l = sockfd = %d\n",insock_l);
                     } else {
                         to.tv_sec=10; to.tv_usec=0; timeout=&to;
@@ -481,7 +481,7 @@ int main(int argc, char *argv[])
             }
         }
 
-		
+
 
 		//	cout<<"insock_l is "<<insock_l<<endl;
         /* new connections */
@@ -491,7 +491,7 @@ int main(int argc, char *argv[])
                     case 1: insock=insock_l; insock_l=-1; break;
                     case -1: close(insock_l); insock_l=-1;break;
                     /* default: still in progress */
-                    }         
+                    }
             }
         }
 
@@ -503,34 +503,34 @@ int main(int argc, char *argv[])
             res=do_read(insock, &ibs);
 	//		cout<<"In main loop: res of do_read(insock, &ibs) is "<<res<<endl;
             if (res<0) {
-                clear_new_event(&ibs);      
+                clear_new_event(&ibs);
 			}else {
                 if (ibs.valid) {
 		//	for(int i=0;i<160;i++)
 		//	{	printf("ibs.event_buffer->data[ %d ] is 0x%08x \n",i, ibs.event_buffer->data[i]);	}
-			//printf("In main_loop:res = do_read(insock, &ibs)>0, ibs valid\n");   
-           
+			//printf("In main_loop:res = do_read(insock, &ibs)>0, ibs valid\n");
+
                       //  if (!evtbuf.event_buffer) {
 						if (!event){
 							int n =0;
-						// convert char data to ems_u32 format	
+						// convert char data to ems_u32 format
 							n = ((ibs.event_buffer->data[3]&0x000000ff)<<24)
 							   +((ibs.event_buffer->data[2]&0x000000ff)<<16)
 							   +((ibs.event_buffer->data[1]&0x000000ff)<<8)
 							   +(ibs.event_buffer->data[0]&0x000000ff);
-							
-							printf("the size of data is %d\n",n); 
-  
+
+							printf("the size of data is %d\n",n);
+
 						//	n=(n+1)*4*sizeof(ems_u32); //comment out on 2015 10 24 by Huagen, bug of segmentation violation
-			
+
         				//	if ((evtbuf.event_buffer=create_event_buffer(n))==0) {
 						//	printf("Failed to create buffer for evtbuf!\n");
 				         //   return -1;
 							//} else {cout<<"The ibs data[0] is 0"<<endl;continue;}
-        				//}			
-					
+        				//}
+
 							event = (ems_u32*)realloc(event, (n+1)*4);
-				
+
 
 							for(int i=0;i<(n+1)*4;i++)
 							{
@@ -539,22 +539,22 @@ int main(int argc, char *argv[])
 											+((ibs.event_buffer->data[i-1]&0x000000ff)<<16)
 											+((ibs.event_buffer->data[i-2]&0x000000ff)<<8)
 											+(ibs.event_buffer->data[i-3]&0x000000ff);
-							}	
-		
+							}
+
 		//					for (int i=0;i<size_n+1;i++) event[i] = evtbuf.event_buffer->data[i];
 							for(int i=0;i<10;i++)
-							{	
-								printf("event[ %d ] is 0x%08x \n",i, event[i]);	
+							{
+								printf("event[ %d ] is 0x%08x \n",i, event[i]);
 							}
-					
+
                         }
                     clear_new_event(&ibs);
                 }
             }
         }
 
-		if(++count%100==0) printf("The loop number is %d\n", count);	
-	//	gSystem->Sleep(1000);		
+		if(++count%100==0) printf("The loop number is %d\n", count);
+	//	gSystem->Sleep(1000);
 	}
 	return 0;
 }
@@ -564,19 +564,19 @@ int decoding(ems_u32 *buffer, int size)
 {
 	int ii =  0;
 	//loop one cluster data with datasize of "size"
-	for (int n=0;n<size+1;n++) 
+	for (int n=0;n<size+1;n++)
 	{//	cout<<"The data size is "<<size<<endl;
         //   printf("Buf [%d] is 0x%08x \n", n, buffer[n]);
-		int temp_ID=0;	
+		int temp_ID=0;
 
 /**********************************************************
 *ADC data
 **********************************************************/
 
-           if((buffer[n]&0xFFF00000) == 0x40100000 || (buffer[n]&0xFFF00000) == 0x40200000 || (buffer[n]&0xFFF00000) == 0x40300000) 
-		{   
-	//	cout<<"buffer["<<n<<"] is event header"<<endl;               
-		int adcres = buffer[n]>>12 & 0x7;		//printf("the ADC resolution is %d \n",adcres);                
+           if((buffer[n]&0xFFF00000) == 0x40100000 || (buffer[n]&0xFFF00000) == 0x40200000 || (buffer[n]&0xFFF00000) == 0x40300000)
+		{
+	//	cout<<"buffer["<<n<<"] is event header"<<endl;
+		int adcres = buffer[n]>>12 & 0x7;		//printf("the ADC resolution is %d \n",adcres);
 		int nrwords = buffer[n]&0xfff;		//printf("the following words are %d \n",nrwords);
                 int id = (buffer[n]>>16)&0xff;		//printf("the XDC id is %d \n",id);
 
@@ -585,13 +585,13 @@ int decoding(ems_u32 *buffer, int size)
 		if(id<22){// identify ADC data by module ID
 		id=id-15; //id number for the array
                 for(int i=1;i<=nrwords;i++)
-		{ 
+		{
 			if((buffer[n+i]&0xf4E00000)==0x04000000)
 			{
 			int ch= (buffer[n+i]>>16) & 0x1F;    //  cout<<" ch = "<<ch<<endl;
 			data1[id][ch] = (buffer[n+i]) & 0x1FFF;   //  cout<<" buffer["<<n+i<<"] is "<<buffer[ch]<<" "<<endl;
-		//	printf("data[%d][ %d ] is %d \n",id, ch, data1[id][ch]);   
-		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]); 
+		//	printf("data[%d][ %d ] is %d \n",id, ch, data1[id][ch]);
+		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]);
 			} else continue;
 		} //loop one ADC data
 
@@ -602,31 +602,31 @@ int decoding(ems_u32 *buffer, int size)
 
 		id=id-25; //id number for the array
                 for(int i=1;i<=nrwords;i++)
-		{ 
+		{
 			if((buffer[n+i]&0xf4E00000)==0x04000000)
 			{
 			int ch= (buffer[n+i]>>16) & 0x1F;    //  cout<<" ch1 = "<<ch<<endl;
 			data1[id][ch] = (buffer[n+i]) & 0xFFF;   //  cout<<" buffer["<<n+i<<"] is "<<buffer[ch1]<<" "<<endl;
-		//	printf("data[%d][ %d ] is %d \n",id1, ch1, data1[id1][ch1]);   
-		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]); 
+		//	printf("data[%d][ %d ] is %d \n",id1, ch1, data1[id1][ch1]);
+		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]);
 			} else continue;
 		} //loop one QDC data
 
 	        n += nrwords;
 
-		} 
+		}
 		else if(id>46&&id<50){
 			id=id-40; //id number for the data array
 		//cout<<"The TDC data"<<endl;
 
                 for(int i=1;i<=nrwords;i++)
-		{ 
+		{
 			if((buffer[n+i]&0xf4C00000)==0x04000000)
 			{
 			int ch= (buffer[n+i]>>16) & 0x1F;     // cout<<" ch2 = "<<ch<<"the id is "<<id<<endl;
 			data1[id][ch] = (buffer[n+i]) & 0xFFFF;  //   cout<<" buffer["<<n+i<<"] is "<<buffer[ch]<<" "<<endl;
-		//	printf("data[%d][ %d ] is %d \n",id2, ch2, data1[id2][ch2]);   
-		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]); 
+		//	printf("data[%d][ %d ] is %d \n",id2, ch2, data1[id2][ch2]);
+		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]);
 			} else continue;
 		} //loop one ADC data
 
@@ -638,8 +638,8 @@ int decoding(ems_u32 *buffer, int size)
 		} //ADC/QDC/TDC data
 	else if((buffer[n]&0xFFF00000) == 0x40000000)
 		{
-	//	cout<<"buffer["<<n<<"] is event header"<<endl;               
-		int adcres = buffer[n]>>12 & 0x7;		//printf("the ADC resolution is %d \n",adcres);                
+	//	cout<<"buffer["<<n<<"] is event header"<<endl;
+		int adcres = buffer[n]>>12 & 0x7;		//printf("the ADC resolution is %d \n",adcres);
 		int nrwords = buffer[n]&0xfff;		//printf("the following words are %d \n",nrwords);
                 int id = (buffer[n]>>16)&0xff;		//printf("the XDC id is %d \n",id);
 
@@ -647,49 +647,82 @@ int decoding(ems_u32 *buffer, int size)
 
 		if(id>0&&id<7){// identify ADC data by module ID
 		//id=id-15; //id number for the array
-                for(int i=1;i<=nrwords;i++)
-		{ 
+    for(int i=1;i<=nrwords;i++)
+		{
 			if((buffer[n+i]&0xf4E00000)==0x04000000)
 			{
 			int ch= (buffer[n+i]>>16) & 0x1F;    //  cout<<" ch = "<<ch<<endl;
 			data1[id][ch] = (buffer[n+i]) & 0x1FFF;   //  cout<<" buffer["<<n+i<<"] is "<<buffer[ch]<<" "<<endl;
-		//	printf("data[%d][ %d ] is %d \n",id, ch, data1[id][ch]);   
-		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]); 
+		//	printf("data[%d][ %d ] is %d \n",id, ch, data1[id][ch]);
+		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]);
 			} else continue;
 		} //loop one ADC data
 
 	        n += nrwords;
+
+          if(id==1){
+                    for(int nr=0;nr<32;nr++)
+                    Si_13_hits->Fill(Si_13_strip[nr],data1[2][nr],1);
+          }
+
+          if(id==2){
+                    h217->Fill(data1[2][16]);
+                    h218->Fill(data1[2][17]);
+                    h219->Fill(data1[2][18]);
+                    h220->Fill(data1[2][19]);
+                    for(int nr=0;nr>32&&nr<48;nr++)
+                    Si_13_hits->Fill(Si_13_strip[nr],data1[2][nr-32],1);
+          }
+
+          if(id==3){
+                    for(int nr=0;nr<32;nr++)
+                    Si_15_hits->Fill(Si_15_strip[nr],data1[3][nr],1);
+          }
+          if(id==4){
+                    for(int nr=0;nr>32&&nr<64;nr++)
+                    Si_15_hits->Fill(Si_15_strip[nr],data1[4][nr-32],1);
+
+          }
+          if(id==5){
+                    for(int nr=0;nr<32;nr++)
+                    Ge_5mm_hits->Fill(Ge_5mm_strip[nr],data1[5][nr],1);
+
+          }
+          if(id==6){
+                    for(int nr=0;nr<32;nr++)
+                    Ge_11mm_hits->Fill(Ge_11mm_strip[nr],data1[6][nr],1);
+          }
 
 		}
 		else if(id==7){//Identify QDC data by module ID
 
 		//id=id-25; //id number for the array
                 for(int i=1;i<=nrwords;i++)
-		{ 
+		{
 			if((buffer[n+i]&0xf4E00000)==0x04000000)
 			{
 			int ch= (buffer[n+i]>>16) & 0x1F;    //  cout<<" ch1 = "<<ch<<endl;
 			data1[id][ch] = (buffer[n+i]) & 0xFFF;   //  cout<<" buffer["<<n+i<<"] is "<<buffer[ch1]<<" "<<endl;
-		//	printf("data[%d][ %d ] is %d \n",id1, ch1, data1[id1][ch1]);   
-		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]); 
+		//	printf("data[%d][ %d ] is %d \n",id1, ch1, data1[id1][ch1]);
+		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]);
 			} else continue;
 		} //loop one QDC data
 
 	        n += nrwords;
 
-		} 
+		}
 		else if(id==8){
 		//	id=id-40; //id number for the data array
 		//cout<<"The TDC data"<<endl;
 
                 for(int i=1;i<=nrwords;i++)
-		{ 
+		{
 			if((buffer[n+i]&0xf4C00000)==0x04000000)
 			{
 			int ch= (buffer[n+i]>>16) & 0x1F;     // cout<<" ch2 = "<<ch<<"the id is "<<id<<endl;
 			data1[id][ch] = (buffer[n+i]) & 0xFFFF;  //   cout<<" buffer["<<n+i<<"] is "<<buffer[ch]<<" "<<endl;
-		//	printf("data[%d][ %d ] is %d \n",id2, ch2, data1[id2][ch2]);   
-		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]); 
+		//	printf("data[%d][ %d ] is %d \n",id2, ch2, data1[id2][ch2]);
+		//	printf("data[%d][ %d ] is 0x%08x \n",id, ch, data1[id][ch]);
 			} else continue;
 		} //loop one ADC data
 
@@ -697,20 +730,20 @@ int decoding(ems_u32 *buffer, int size)
 
 		} else continue;
 
-		
+
 
 		} //ADC/QDC/TDC data, module with HW ID
-		
+
 
 /**************************************************************************************************
 *Scaler data
 ***************************************************************************************************/
 
-		
+
 		if((buffer[n]==1)&&(buffer[n+1]==32)){
 			//else if((buffer[n]&0xFFFFFFFF)==0x0000000a){
 			//	 cout<<"scaler events!"<<endl;
-				
+
 				int scaler_length = buf[n+1]&0xFFFFFFFF;
 
 				//for(int k=1;k<=scaler_length;k++)
@@ -720,9 +753,9 @@ int decoding(ems_u32 *buffer, int size)
 					//}
 
 				// n += scaler_length;
-		} //loop scaler data 
+		} //loop scaler data
 
-//	}while(n++<size);//test the cluster loop	
+//	}while(n++<size);//test the cluster loop
 
 	}//loop one cluster data with size
 
@@ -733,11 +766,11 @@ int decoding(ems_u32 *buffer, int size)
 /***********************************************************************************************************************************/
 
 				//if(temp_ID==48){
-						  
-  						    h217->Fill(data1[2][16]);				             
-						    h218->Fill(data1[2][17]);
-					            h219->Fill(data1[2][18]);
-					            h220->Fill(data1[2][19]);
+
+  						//        h217->Fill(data1[2][16]);
+						  //        h218->Fill(data1[2][17]);
+					   //         h219->Fill(data1[2][18]);
+					   //         h220->Fill(data1[2][19]);
 							//printf("data[1][ 16 ] is %d \n", data1[1][16]);
 							//printf("data[1][ 17 ] is %d \n", data1[1][17]);
 							//printf("data[1][ 18 ] is %d \n", data1[1][18]);
@@ -749,8 +782,8 @@ int decoding(ems_u32 *buffer, int size)
 					//	h705->Fill(data1[7][5]);
 					//	h707->Fill(data1[7][7]);
 					//	h709->Fill(data1[7][9]);
-	
-						for(int i=0; i<33;i++)
+
+	/*					for(int i=0; i<33;i++)
 						{
  							Scint_qhits->Fill(scint[i],data1[7][i],1);
 							Scint_thits->Fill(scint[i],data1[8][i],1);
@@ -760,7 +793,7 @@ int decoding(ems_u32 *buffer, int size)
 						{
 						if(nr<32) {
 						Ge_5mm_hits->Fill(Ge_5mm_strip[nr],data1[5][nr],1);
-                                		Ge_11mm_hits->Fill(Ge_11mm_strip[nr],data1[6][nr],1);
+            Ge_11mm_hits->Fill(Ge_11mm_strip[nr],data1[6][nr],1);
 						Si_13_hits->Fill(Si_13_strip[nr],data1[1][nr],1);
 						Si_15_hits->Fill(Si_15_strip[nr],data1[3][nr],1);
 						}
@@ -772,13 +805,13 @@ int decoding(ems_u32 *buffer, int size)
 
 						}
 			cout<<"Fill the histogram!"<<endl<<endl; //Filling only once per cluster data
-		
+*/
 		//	}//loop scaler data which means one event complete
 		//	}//data structure complete, fill histogram
-	  	 
-	
-				
-		//		
+
+
+
+		//
 
 
 
@@ -817,19 +850,3 @@ int decoding(ems_u32 *buffer, int size)
       //  cout<<"the Entries of histogram is "<<h217->GetEntries()<< endl;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
