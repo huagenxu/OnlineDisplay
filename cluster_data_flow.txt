@@ -1,0 +1,141 @@
+
+source /home/huagen/ems/common/modultypes_arr.tcl
+
+# establish the connection
+ems_connect localhost 4096
+rename [ems_open vme] ved
+
+# reset the ems server
+ved reset
+
+# create an instrumentation system
+rename [ved is create 4	4] is4
+rename [ved is create 5 5] is5
+rename [ved is create 6	6] is6
+
+
+# crate the module list (global for the ved)
+set mlist {}
+#set mlist2 {}
+# replace 0x00000000 by the base address of the module
+lappend mlist "vme $modtypearr(mesytec_madc32) 0X03000000 0"
+lappend mlist "vme $modtypearr(mesytec_madc32) 0X04000000 0"
+lappend mlist "vme $modtypearr(mesytec_madc32) 0X05000000 0"
+
+
+ved modullist create $mlist 
+lindex $mlist 0
+
+# create the memberlist for the instrumentation system
+#   the '0' is the index into the module list
+is4 memberlist create 0
+is5 memberlist create 1
+is6 memberlist create 2
+#is7 memberlist create 6
+
+# reset the module
+
+#is4 command1 madc32bankset 0
+
+if {1} {
+is4 command1 madc32rangeset 2
+is5 command1 madc32rangeset 2
+is6 command1 madc32rangeset 2
+
+is4 command1 madc32bitset 4
+is5 command1 madc32bitset 4
+is6 command1 madc32bitset 4
+
+is4 command1 madc32reset
+is5 command1 madc32reset
+is6 command1 madc32reset
+ }             
+
+#ved trigger create Immer 1 100
+#ved trigger create vmeirq 1 0 1 0
+#is readoutlist create 1 1 {madc32read_one {}}
+#ved dataout create 1 cluster 1 0 file test_%c.dat
+#-Yved dataout create 2 cluster 1 0 socket localhost 12345
+
+#ved readout start
+
+
+
+
+huagen@ikp475:~/ems/build/events++$ ./cluster2event -asynchron -verbose t :123456 :3333 -maxmem 12345564
+connecting input with port 123456
+connecting output with port 3333
+
+
+huagen@ikp475:~/ems/events$ ./event_distributor localhost:3333 5555
+inname=localhost:3333; outname=5555
+the hostname is localhost
+using 127.0.0.1:3333 for input and port 5555 for output
+The insock_l is -1
+The outsock_l is 3
+The insock is -1
+The nfds = -1
+The nfds = 3
+The idx = 854729408 and num_socks = 0
+The need_data = 0
+need_data = 0
+nfds+1 = 4
+
+
+huagen@ikp475:~/scripts$ netstat -ant
+tcp        0      0 0.0.0.0:57304           0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:345             0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:6012          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:6013          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:6014          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:6015          0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:57920           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:6016          0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:2048            0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:4096            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:6017          0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:3333            0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:36327           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:4096          127.0.0.1:45104         ESTABLISHED
+tcp        0      0 134.94.181.255:22       134.94.182.142:60662    ESTABLISHED
+tcp       36      0 127.0.0.1:57920         127.0.0.1:55349         ESTABLISHED
+tcp        0      0 134.94.181.255:22       134.94.182.142:60658    ESTABLISHED
+tcp        0      0 127.0.0.1:2048          127.0.0.1:42446         ESTABLISHED
+tcp        0      0 134.94.181.255:22       134.94.182.142:60660    ESTABLISHED
+tcp        0      0 134.94.181.255:22       134.94.182.142:42817    ESTABLISHED
+tcp        0      0 134.94.181.255:22       134.94.182.142:54959    ESTABLISHED
+tcp        0      0 134.94.181.255:22       134.94.182.142:53890    ESTABLISHED
+tcp        0      0 127.0.0.1:45104         127.0.0.1:4096          ESTABLISHED
+tcp        0      0 127.0.0.1:55349         127.0.0.1:57920         ESTABLISHED
+tcp        1      0 134.94.181.255:59715    91.189.89.144:80        CLOSE_WAIT 
+tcp        0      0 134.94.181.255:22       134.94.182.142:43272    ESTABLISHED
+tcp        0      0 127.0.0.1:42446         127.0.0.1:2048          ESTABLISHED
+tcp        0      0 134.94.181.255:22       134.94.182.142:55086    ESTABLISHED
+tcp6       0      0 :::111                  :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+tcp6       0      0 ::1:631                 :::*                    LISTEN     
+tcp6       0      0 ::1:6010                :::*                    LISTEN     
+tcp6       0      0 ::1:6011                :::*                    LISTEN     
+tcp6       0      0 :::54395                :::*                    LISTEN     
+tcp6       0      0 ::1:6012                :::*                    LISTEN     
+tcp6       0      0 ::1:6013                :::*                    LISTEN     
+tcp6       0      0 ::1:6014                :::*                    LISTEN     
+tcp6       0      0 ::1:6015                :::*                    LISTEN     
+tcp6       0      0 ::1:6016                :::*                    LISTEN     
+tcp6       0      0 ::1:6017                :::*                    LISTEN     
+tcp6       0      0 ::1:6017                ::1:59375               ESTABLISHED
+tcp6       0      0 ::1:59375               ::1:6017                ESTABLISHED
+tcp6       0      0 ::1:6010                ::1:35463               ESTABLISHED
+tcp6       0      0 ::1:37816               ::1:6014                ESTABLISHED
+tcp6       0      0 ::1:6014                ::1:37814               ESTABLISHED
+tcp6       0      0 ::1:37814               ::1:6014                ESTABLISHED
+tcp6       0      0 ::1:6014                ::1:37815               ESTABLISHED
+tcp6       0      0 ::1:6016                ::1:32953               ESTABLISHED
+tcp6       0      0 ::1:35463               ::1:6010                ESTABLISHED
+tcp6       0      0 ::1:32953               ::1:6016                ESTABLISHED
+tcp6       0      0 ::1:6014                ::1:37816               ESTABLISHED
+tcp6       0      0 ::1:37815               ::1:6014                ESTABLISHED
+
+

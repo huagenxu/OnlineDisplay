@@ -1,0 +1,958 @@
+    1.139420] TCP established hash table entries: 524288 (order: 11, 8388608 bytes)
+[    1.141518] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+[    1.141774] TCP: Hash tables configured (established 524288 bind 65536)
+[    1.141776] TCP reno registered
+[    1.141787] UDP hash table entries: 4096 (order: 5, 131072 bytes)
+[    1.141844] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
+[    1.141976] NET: Registered protocol family 1
+[    1.142002] pci 0000:00:1a.0: PCI INT A -> GSI 16 (level, low) -> IRQ 16
+[    1.142026] pci 0000:00:1a.0: PCI INT A disabled
+[    1.142048] pci 0000:00:1d.0: PCI INT A -> GSI 23 (level, low) -> IRQ 23
+[    1.142071] pci 0000:00:1d.0: PCI INT A disabled
+[    1.142091] pci 0000:01:00.0: Boot video device
+[    1.142120] PCI: CLS 32 bytes, default 64
+[    1.142122] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    1.142124] Placing 64MB software IO TLB between ffff8800bbe66000 - ffff8800bfe66000
+[    1.142125] software IO TLB at phys 0xbbe66000 - 0xbfe66000
+[    1.142605] audit: initializing netlink socket (disabled)
+[    1.142612] type=2000 audit(1372770543.820:1): initialized
+[    1.171584] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    1.192840] VFS: Disk quotas dquot_6.5.2
+[    1.192886] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.193256] fuse init (API version 7.17)
+[    1.193322] msgmni has been set to 15921
+[    1.193564] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+[    1.193584] io scheduler noop registered
+[    1.193585] io scheduler deadline registered
+[    1.193608] io scheduler cfq registered (default)
+[    1.193908] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    1.193927] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    1.193966] intel_idle: MWAIT substates: 0x1120
+[    1.193976] intel_idle: v0.4 model 0x1E
+[    1.193977] intel_idle: lapic_timer_reliable_states 0x2
+[    1.194068] input: Power Button as /devices/LNXSYSTM:00/device:00/PNP0C0C:00/input/input0
+[    1.194071] ACPI: Power Button [PWRB]
+[    1.194101] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input1
+[    1.194103] ACPI: Power Button [PWRF]
+[    1.195286] ERST: Table is not found!
+[    1.195288] GHES: HEST is not enabled!
+[    1.195335] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    1.215718] serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+[    1.334787] Freeing initrd memory: 19972k freed
+[    1.454577] 00:0b: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+[    1.486168] Linux agpgart interface v0.103
+[    1.487357] brd: module loaded
+[    1.487959] loop: module loaded
+[    1.488050] ahci 0000:00:1f.2: version 3.0
+[    1.488066] ahci 0000:00:1f.2: PCI INT D -> GSI 21 (level, low) -> IRQ 21
+[    1.488105] ahci 0000:00:1f.2: irq 45 for MSI/MSI-X
+[    1.488133] ahci: SSS flag set, parallel bus scan disabled
+[    1.501935] ahci 0000:00:1f.2: AHCI 0001.0300 32 slots 6 ports 3 Gbps 0x3f impl SATA mode
+[    1.501942] ahci 0000:00:1f.2: flags: 64bit ncq sntf stag pm led clo pmp pio slum part ems sxs apst 
+[    1.501949] ahci 0000:00:1f.2: setting latency timer to 64
+[    1.542301] scsi0 : ahci
+[    1.542363] scsi1 : ahci
+[    1.542415] scsi2 : ahci
+[    1.542467] scsi3 : ahci
+[    1.542520] scsi4 : ahci
+[    1.542571] scsi5 : ahci
+[    1.542666] ata1: SATA max UDMA/133 abar m2048@0xdbff7000 port 0xdbff7100 irq 45
+[    1.542668] ata2: SATA max UDMA/133 abar m2048@0xdbff7000 port 0xdbff7180 irq 45
+[    1.542670] ata3: SATA max UDMA/133 abar m2048@0xdbff7000 port 0xdbff7200 irq 45
+[    1.542673] ata4: SATA max UDMA/133 abar m2048@0xdbff7000 port 0xdbff7280 irq 45
+[    1.542675] ata5: SATA max UDMA/133 abar m2048@0xdbff7000 port 0xdbff7300 irq 45
+[    1.542677] ata6: SATA max UDMA/133 abar m2048@0xdbff7000 port 0xdbff7380 irq 45
+[    1.542692] ahci 0000:03:00.0: PCI INT A -> GSI 18 (level, low) -> IRQ 18
+[    1.557938] ahci 0000:03:00.0: AHCI 0001.0000 32 slots 2 ports 3 Gbps 0x3 impl SATA mode
+[    1.557944] ahci 0000:03:00.0: flags: 64bit ncq led clo pmp pio 
+[    1.557952] ahci 0000:03:00.0: setting latency timer to 64
+[    1.558166] scsi6 : ahci
+[    1.558223] scsi7 : ahci
+[    1.558276] ata7: SATA max UDMA/133 abar m8192@0xdfffa000 port 0xdfffa100 irq 18
+[    1.558279] ata8: SATA max UDMA/133 abar m8192@0xdfffa000 port 0xdfffa180 irq 18
+[    1.558345] pata_acpi 0000:03:00.1: PCI INT B -> GSI 19 (level, low) -> IRQ 19
+[    1.558364] pata_acpi 0000:03:00.1: setting latency timer to 64
+[    1.558376] pata_acpi 0000:03:00.1: PCI INT B disabled
+[    1.558570] Fixed MDIO Bus: probed
+[    1.558583] tun: Universal TUN/TAP device driver, 1.6
+[    1.558585] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    1.558623] PPP generic driver version 2.4.2
+[    1.558697] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.558708] ehci_hcd 0000:00:1a.0: PCI INT A -> GSI 16 (level, low) -> IRQ 16
+[    1.558719] ehci_hcd 0000:00:1a.0: setting latency timer to 64
+[    1.558722] ehci_hcd 0000:00:1a.0: EHCI Host Controller
+[    1.558761] ehci_hcd 0000:00:1a.0: new USB bus registered, assigned bus number 1
+[    1.558785] ehci_hcd 0000:00:1a.0: debug port 2
+[    1.562693] ehci_hcd 0000:00:1a.0: cache line size of 32 is not supported
+[    1.562704] ehci_hcd 0000:00:1a.0: irq 16, io mem 0xdbffe000
+[    1.577907] ehci_hcd 0000:00:1a.0: USB 2.0 started, EHCI 1.00
+[    1.578040] hub 1-0:1.0: USB hub found
+[    1.578044] hub 1-0:1.0: 2 ports detected
+[    1.578094] ehci_hcd 0000:00:1d.0: PCI INT A -> GSI 23 (level, low) -> IRQ 23
+[    1.578105] ehci_hcd 0000:00:1d.0: setting latency timer to 64
+[    1.578107] ehci_hcd 0000:00:1d.0: EHCI Host Controller
+[    1.578147] ehci_hcd 0000:00:1d.0: new USB bus registered, assigned bus number 2
+[    1.578167] ehci_hcd 0000:00:1d.0: debug port 2
+[    1.582070] ehci_hcd 0000:00:1d.0: cache line size of 32 is not supported
+[    1.582081] ehci_hcd 0000:00:1d.0: irq 23, io mem 0xdbffd000
+[    1.597906] ehci_hcd 0000:00:1d.0: USB 2.0 started, EHCI 1.00
+[    1.598031] hub 2-0:1.0: USB hub found
+[    1.598034] hub 2-0:1.0: 2 ports detected
+[    1.598084] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.598094] uhci_hcd: USB Universal Host Controller Interface driver
+[    1.598129] usbcore: registered new interface driver libusual
+[    1.598155] i8042: PNP: No PS/2 controller found. Probing ports directly.
+[    1.600685] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    1.600689] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    1.600783] mousedev: PS/2 mouse device common for all mice
+[    1.600895] rtc_cmos 00:03: RTC can wake from S4
+[    1.600986] rtc_cmos 00:03: rtc core: registered rtc_cmos as rtc0
+[    1.601010] rtc0: alarms up to one month, y3k, 114 bytes nvram, hpet irqs
+[    1.601062] device-mapper: uevent: version 1.0.3
+[    1.601112] device-mapper: ioctl: 4.22.0-ioctl (2011-10-19) initialised: dm-devel@redhat.com
+[    1.601244] cpuidle: using governor ladder
+[    1.601447] cpuidle: using governor menu
+[    1.601449] EFI Variables Facility v0.08 2004-May-17
+[    1.601616] TCP cubic registered
+[    1.601687] NET: Registered protocol family 10
+[    1.602041] NET: Registered protocol family 17
+[    1.602054] Registering the dns_resolver key type
+[    1.602163] PM: Hibernation image not present or could not be loaded.
+[    1.602171] registered taskstats version 1
+[    1.617764]   Magic number: 5:150:179
+[    1.617810] acpi device:0f: hash matches
+[    1.617913] rtc_cmos 00:03: setting system clock to 2013-07-02 13:09:04 UTC (1372770544)
+[    1.620319] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[    1.620320] EDD information not available.
+[    1.878047] ata8: SATA link down (SStatus 0 SControl 300)
+[    1.878183] ata7: SATA link down (SStatus 0 SControl 300)
+[    1.890045] usb 1-1: new high-speed USB device number 2 using ehci_hcd
+[    2.022776] hub 1-1:1.0: USB hub found
+[    2.022971] hub 1-1:1.0: 6 ports detected
+[    2.034035] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    2.062805] ata1.00: ATA-8: ST31500341AS, CC1H, max UDMA/133
+[    2.062811] ata1.00: 2930277168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[    2.104730] ata1.00: configured for UDMA/133
+[    2.105035] scsi 0:0:0:0: Direct-Access     ATA      ST31500341AS     CC1H PQ: 0 ANSI: 5
+[    2.105291] sd 0:0:0:0: [sda] 2930277168 512-byte logical blocks: (1.50 TB/1.36 TiB)
+[    2.105300] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    2.105325] sd 0:0:0:0: [sda] Write Protect is off
+[    2.105327] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    2.105338] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    2.134033] usb 2-1: new high-speed USB device number 2 using ehci_hcd
+[    2.141974] Refined TSC clocksource calibration: 2942.463 MHz.
+[    2.141981] Switching to clocksource tsc
+[    2.168926]  sda: sda1 sda2 sda3 < sda5 sda6 sda7 >
+[    2.170356] sd 0:0:0:0: [sda] Attached SCSI disk
+[    2.266593] hub 2-1:1.0: USB hub found
+[    2.266664] hub 2-1:1.0: 8 ports detected
+[    2.421930] ata2: SATA link down (SStatus 0 SControl 300)
+[    2.538100] usb 2-1.3: new high-speed USB device number 3 using ehci_hcd
+[    2.913966] ata3: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+[    2.917025] ata3.00: ATAPI: HL-DT-ST DVDRAM GH22NS50, TN03, max UDMA/100
+[    2.920805] ata3.00: configured for UDMA/100
+[    2.922111] usb 2-1.5: new low-speed USB device number 4 using ehci_hcd
+[    2.930096] scsi 2:0:0:0: CD-ROM            HL-DT-ST DVDRAM GH22NS50  TN03 PQ: 0 ANSI: 5
+[    2.939237] sr0: scsi3-mmc drive: 48x/48x writer dvd-ram cd/rw xa/form2 cdda tray
+[    2.939243] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    2.939524] sr 2:0:0:0: Attached scsi CD-ROM sr0
+[    2.939767] sr 2:0:0:0: Attached scsi generic sg1 type 5
+[    3.094114] usb 2-1.6: new low-speed USB device number 5 using ehci_hcd
+[    3.257959] ata4: SATA link down (SStatus 0 SControl 300)
+[    3.749938] ata5: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    3.750728] ata5.00: ATA-8: ST33000650NS, 0004, max UDMA/133
+[    3.750734] ata5.00: 5860533168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[    3.751635] ata5.00: configured for UDMA/133
+[    3.751814] scsi 4:0:0:0: Direct-Access     ATA      ST33000650NS     0004 PQ: 0 ANSI: 5
+[    3.751990] sd 4:0:0:0: [sdb] 5860533168 512-byte logical blocks: (3.00 TB/2.72 TiB)
+[    3.752028] sd 4:0:0:0: Attached scsi generic sg2 type 0
+[    3.752030] sd 4:0:0:0: [sdb] Write Protect is off
+[    3.752032] sd 4:0:0:0: [sdb] Mode Sense: 00 3a 00 00
+[    3.752051] sd 4:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    3.799611]  sdb: sdb1
+[    3.800135] sd 4:0:0:0: [sdb] Attached SCSI disk
+[    4.069932] ata6: SATA link down (SStatus 0 SControl 300)
+[    4.071494] Freeing unused kernel memory: 920k freed
+[    4.071585] Write protecting the kernel read-only data: 12288k
+[    4.075439] Freeing unused kernel memory: 1608k freed
+[    4.078325] Freeing unused kernel memory: 1196k freed
+[    4.097685] udevd[133]: starting version 175
+[    4.114966] pata_jmicron 0000:03:00.1: PCI INT B -> GSI 19 (level, low) -> IRQ 19
+[    4.114992] pata_jmicron 0000:03:00.1: setting latency timer to 64
+[    4.115774] scsi8 : pata_jmicron
+[    4.115840] scsi9 : pata_jmicron
+[    4.116001] r8169 Gigabit Ethernet driver 2.3LK-NAPI loaded
+[    4.116019] r8169 0000:02:00.0: PCI INT A -> GSI 19 (level, low) -> IRQ 19
+[    4.116049] r8169 0000:02:00.0: setting latency timer to 64
+[    4.116103] r8169 0000:02:00.0: irq 46 for MSI/MSI-X
+[    4.116165] ata9: PATA max UDMA/100 cmd 0xdc00 ctl 0xd880 bmdma 0xd400 irq 19
+[    4.116167] ata10: PATA max UDMA/100 cmd 0xd800 ctl 0xd480 bmdma 0xd408 irq 19
+[    4.116493] r8169 0000:02:00.0: eth0: RTL8168d/8111d at 0xffffc90000c7c000, bc:ae:c5:34:39:0d, XID 083000c0 IRQ 46
+[    4.116496] r8169 0000:02:00.0: eth0: jumbo features [frames: 9200 bytes, tx checksumming: ko]
+[    4.121245] pcnet32: pcnet32.c:v1.35 21.Apr.2008 tsbogend@alpha.franken.de
+[    4.121274] pcnet32 0000:07:01.0: PCI INT A -> GSI 16 (level, low) -> IRQ 16
+[    4.121294] pcnet32: PCnet/PRO 79C976 at 0xec00, 00:15:77:ed:10:fb assigned IRQ 16
+[    4.121426] pcnet32: Found PHY 0022:561b at address 1
+[    4.121496] pcnet32: Found PHY 0022:561b at address 2
+[    4.123356] pcnet32: eth1: registered as PCnet/PRO 79C976
+[    4.123383] pcnet32: 1 cards_found
+[    4.136193] input: HID 046a:0011 as /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.5/2-1.5:1.0/input/input2
+[    4.136399] generic-usb 0003:046A:0011.0001: input,hidraw0: USB HID v1.11 Keyboard [HID 046a:0011] on usb-0000:00:1d.0-1.5/input0
+[    4.139688] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.6/2-1.6:1.0/input/input3
+[    4.139910] generic-usb 0003:046D:C050.0002: input,hidraw1: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:00:1d.0-1.6/input0
+[    4.139923] usbcore: registered new interface driver usbhid
+[    4.139924] usbhid: USB HID core driver
+[    4.438874] firewire_ohci 0000:07:03.0: PCI INT A -> GSI 18 (level, low) -> IRQ 18
+[    4.506008] firewire_ohci: Added fw-ohci device 0000:07:03.0, OHCI v1.10, 4 IR + 8 IT contexts, quirks 0x11
+[    5.006206] firewire_core: created device fw0: GUID 001fc60000095de2, S400
+[    5.756385] vesafb: mode is 1280x1024x32, linelength=5120, pages=0
+[    5.756390] vesafb: scrolling: redraw
+[    5.756392] vesafb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+[    5.761113] vesafb: framebuffer at 0xdd000000, mapped to 0xffffc90005c00000, using 5120k, total 5120k
+[    5.761307] Console: switching to colour frame buffer device 160x64
+[    5.761325] fb0: VESA VGA frame buffer device
+[    6.022604] EXT4-fs (sda5): INFO: recovery required on readonly filesystem
+[    6.022606] EXT4-fs (sda5): write access will be enabled during recovery
+[   10.631422] EXT4-fs (sda5): orphan cleanup on readonly fs
+[   10.631433] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 134047
+[   10.631481] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 134046
+[   10.631488] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 134036
+[   10.631495] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 134034
+[   10.631508] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 132089
+[   10.631515] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 132086
+[   10.631521] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 132087
+[   10.631528] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 132084
+[   10.631534] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 132082
+[   10.631540] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 132029
+[   10.631547] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 131010
+[   10.631570] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 131006
+[   10.631576] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 131004
+[   10.631583] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 131568
+[   10.631590] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 131564
+[   10.631597] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 131012
+[   10.631606] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130995
+[   10.631613] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130994
+[   10.631619] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130992
+[   10.631629] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130991
+[   10.631635] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130986
+[   10.631642] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130982
+[   10.631652] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 656136
+[   10.631678] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130979
+[   10.631685] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130999
+[   10.631691] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130998
+[   10.631699] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130996
+[   10.631707] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 131003
+[   10.631713] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 131002
+[   10.631721] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 131000
+[   10.631751] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130990
+[   10.631757] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130988
+[   10.795130] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130987
+[   10.809694] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130975
+[   10.809703] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130974
+[   10.809710] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130984
+[   10.809716] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130983
+[   10.813597] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130980
+[   10.824323] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130972
+[   10.824332] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130971
+[   10.824358] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130970
+[   10.824377] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130968
+[   10.824385] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130967
+[   10.825493] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130966
+[   10.826343] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130964
+[   10.826350] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130962
+[   10.826363] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130922
+[   10.847389] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 130836
+[   10.903949] EXT4-fs (sda5): ext4_orphan_cleanup: deleting unreferenced inode 920658
+[   10.903989] EXT4-fs (sda5): 49 orphan inodes deleted
+[   10.903993] EXT4-fs (sda5): recovery complete
+[   11.104760] EXT4-fs (sda5): mounted filesystem with ordered data mode. Opts: (null)
+[   23.142501] ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   23.142505] ADDRCONF(NETDEV_UP): eth1: link is not ready
+[   23.152083] udevd[448]: starting version 175
+[   23.157611] lp: driver loaded but no devices found
+[   23.169248] Adding 9765884k swap on /dev/sda2.  Priority:-1 extents:1 across:9765884k 
+[   23.178880] wmi: Mapper loaded
+[   23.198867] SIS1100 driver V2.15.00 (c) 2010-11-28 Forschungszentrum Juelich
+[   23.198908] sis1100: found SIS1100 PCI at 0000:07:02.0
+[   23.200091] sis1100 0000:07:02.0: PCI INT A -> GSI 17 (level, low) -> IRQ 17
+[   23.200133] sis1100[0]: hardwired device id: 0x9054
+[   23.200224] sis1100[0]: local ident: 0x07010101
+[   23.200226] sis1100[0]: HW version 1; FW code 1; FW version 7
+[   23.200228] sis1100[0]: D16 DMA write not possible
+[   23.200230] sis1100[0]: D8 DMA write not possible
+[   23.200232] sis1100[0]: size of remote space: 0x10000000 (256 MByte)
+[   23.200492] sis1100[0]: serial number not set
+[   23.207095] EDAC MC: Ver: 2.1.0
+[   23.208252] ATK0110 ATK0110:00: EC enabled
+[   23.209559] snd_hda_intel 0000:00:1b.0: PCI INT A -> GSI 22 (level, low) -> IRQ 22
+[   23.209608] snd_hda_intel 0000:00:1b.0: irq 47 for MSI/MSI-X
+[   23.209632] snd_hda_intel 0000:00:1b.0: setting latency timer to 64
+[   23.210294] EDAC MC0: Giving out device to 'i7core_edac.c' 'i7 core #0': DEV 0000:3f:03.0
+[   23.210313] EDAC PCI0: Giving out device to module 'i7core_edac' controller 'EDAC PCI controller': DEV '0000:3f:03.0' (POLLED)
+[   23.210321] EDAC i7core: Driver loaded, 1 memory controller(s) found.
+[   23.213091] type=1400 audit(1372770566.091:2): apparmor="STATUS" operation="profile_load" name="/sbin/dhclient" pid=620 comm="apparmor_parser"
+[   23.213442] type=1400 audit(1372770566.095:3): apparmor="STATUS" operation="profile_load" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=620 comm="apparmor_parser"
+[   23.213649] type=1400 audit(1372770566.095:4): apparmor="STATUS" operation="profile_load" name="/usr/lib/connman/scripts/dhclient-script" pid=620 comm="apparmor_parser"
+[   23.260495] input: HDA Intel Line as /devices/pci0000:00/0000:00:1b.0/sound/card0/input4
+[   23.260592] input: HDA Intel Rear Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input5
+[   23.260659] input: HDA Intel Line-Out Side as /devices/pci0000:00/0000:00:1b.0/sound/card0/input6
+[   23.260724] input: HDA Intel Line-Out CLFE as /devices/pci0000:00/0000:00:1b.0/sound/card0/input7
+[   23.260789] input: HDA Intel Line-Out Surround as /devices/pci0000:00/0000:00:1b.0/sound/card0/input8
+[   23.260850] input: HDA Intel Line-Out Front as /devices/pci0000:00/0000:00:1b.0/sound/card0/input9
+[   23.653940] usbcore: registered new interface driver snd-usb-audio
+[   23.674583] set resolution quirk: cval->res = 384
+[   23.701215] sis1100[0]: remote ident: 0x06010102
+[   23.701218] sis1100[0]: remote is VME
+[   23.701220] sis1100[0]: remote HW_ver 1 FW_code 1 FW_ver 6
+[   23.701239] sis1100[0]: 3100: berr_time=6250 ns
+[   23.701241] sis1100[0]: 3100: long_time=10 ms
+[   23.701736] udevd[482]: renamed network interface eth1 to eth2
+[   23.703090] sis1100[0]: no SDRAM installed
+[   23.703093] sis1100[0]: 3100: size of SDRAM: 0x0 (0 MByte)
+[   23.703099] sis1100[0]: 3100: DSP is not present
+[   23.703105] sis1100[0]: 3100: remote stat=0x00015200
+[   23.881033] Linux video capture interface: v2.00
+[   23.888231] uvcvideo: Found UVC 1.00 device <unnamed> (046d:0809)
+[   23.904041] input: UVC Camera (046d:0809) as /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.3/2-1.3:1.0/input/input10
+[   23.904289] usbcore: registered new interface driver uvcvideo
+[   23.904292] USB Video Class driver (1.1.1)
+[   24.409957] EXT4-fs (sda5): re-mounted. Opts: errors=remount-ro
+[   24.751257] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[   24.986160] EXT4-fs (sdb1): mounted filesystem with ordered data mode. Opts: (null)
+[   30.531516] EXT4-fs (sda6): mounted filesystem with ordered data mode. Opts: (null)
+[   39.602909] EXT4-fs (sda7): mounted filesystem with ordered data mode. Opts: (null)
+[   40.663866] init: failsafe main process (928) killed by TERM signal
+[   40.903136] RPC: Registered named UNIX socket transport module.
+[   40.903138] RPC: Registered udp transport module.
+[   40.903139] RPC: Registered tcp transport module.
+[   40.903140] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[   40.904533] FS-Cache: Loaded
+[   40.907313] FS-Cache: Netfs 'nfs' registered for caching
+[   40.909594] Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+[   40.946833] type=1400 audit(1372770583.827:5): apparmor="STATUS" operation="profile_load" name="/usr/lib/lightdm/lightdm/lightdm-guest-session-wrapper" pid=1004 comm="apparmor_parser"
+[   40.946941] type=1400 audit(1372770583.827:6): apparmor="STATUS" operation="profile_load" name="/usr/share/gdm/guest-session/Xsession" pid=1003 comm="apparmor_parser"
+[   40.947173] type=1400 audit(1372770583.827:7): apparmor="STATUS" operation="profile_replace" name="/sbin/dhclient" pid=1005 comm="apparmor_parser"
+[   40.947592] type=1400 audit(1372770583.827:8): apparmor="STATUS" operation="profile_load" name="/usr/lib/telepathy/mission-control-5" pid=1008 comm="apparmor_parser"
+[   40.947599] type=1400 audit(1372770583.827:9): apparmor="STATUS" operation="profile_replace" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=1005 comm="apparmor_parser"
+[   40.947874] type=1400 audit(1372770583.827:10): apparmor="STATUS" operation="profile_replace" name="/usr/lib/connman/scripts/dhclient-script" pid=1005 comm="apparmor_parser"
+[   40.947883] type=1400 audit(1372770583.827:11): apparmor="STATUS" operation="profile_load" name="/usr/lib/cups/backend/cups-pdf" pid=1009 comm="apparmor_parser"
+[   40.947964] type=1400 audit(1372770583.827:12): apparmor="STATUS" operation="profile_load" name="/usr/sbin/tcpdump" pid=1011 comm="apparmor_parser"
+[   40.948068] type=1400 audit(1372770583.827:13): apparmor="STATUS" operation="profile_load" name="/usr/lib/telepathy/telepathy-*" pid=1008 comm="apparmor_parser"
+[   40.948377] type=1400 audit(1372770583.827:14): apparmor="STATUS" operation="profile_load" name="/usr/sbin/cupsd" pid=1009 comm="apparmor_parser"
+[   40.970874] Bluetooth: Core ver 2.16
+[   40.970891] NET: Registered protocol family 31
+[   40.970893] Bluetooth: HCI device and connection manager initialized
+[   40.970895] Bluetooth: HCI socket layer initialized
+[   40.970896] Bluetooth: L2CAP socket layer initialized
+[   40.970901] Bluetooth: SCO socket layer initialized
+[   40.972144] Bluetooth: RFCOMM TTY layer initialized
+[   40.972148] Bluetooth: RFCOMM socket layer initialized
+[   40.972150] Bluetooth: RFCOMM ver 1.11
+[   40.972957] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   40.972959] Bluetooth: BNEP filters: protocol multicast
+[   41.003662] ppdev: user-space parallel port driver
+[   41.147788] init: gdm main process (1189) killed by TERM signal
+[   41.157679] r8169 0000:02:00.0: eth0: link down
+[   41.157684] r8169 0000:02:00.0: eth0: link down
+[   41.158183] ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   41.158443] ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   41.160068] pcnet32 0000:07:01.0: eth2: Using PHY number 1
+[   41.160171] pcnet32 0000:07:01.0: eth2: link down
+[   41.523080] mtrr: base(0xdd000000) is not aligned on a size(0xe00000) boundary
+[   41.762307] ADDRCONF(NETDEV_UP): eth2: link is not ready
+[   41.777618] ADDRCONF(NETDEV_UP): eth2: link is not ready
+[   42.008733] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   42.028179] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[   42.531777] init: plymouth-stop pre-start process (2090) terminated with status 1
+[   43.986882] r8169 0000:02:00.0: eth0: link up
+[   43.987540] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   54.124794] eth0: no IPv6 routers present
+[ 6445.965890] dropped package IN=eth0 OUT= MAC=bc:ae:c5:34:39:0d:00:1e:67:2c:26:6d:08:00 SRC=134.94.180.75 DST=134.94.192.150 LEN=52 TOS=0x10 PREC=0x00 TTL=62 ID=32858 DF PROTO=TCP SPT=22 DPT=47251 WINDOW=267 RES=0x00 ACK URGP=0 
+[ 6521.227366] dropped package IN=eth0 OUT= MAC=bc:ae:c5:34:39:0d:00:1e:67:2c:26:6d:08:00 SRC=134.94.180.75 DST=134.94.192.150 LEN=52 TOS=0x10 PREC=0x00 TTL=62 ID=32859 DF PROTO=TCP SPT=22 DPT=47251 WINDOW=267 RES=0x00 ACK URGP=0 
+[ 6596.488931] dropped package IN=eth0 OUT= MAC=bc:ae:c5:34:39:0d:00:1e:67:2c:26:6d:08:00 SRC=134.94.180.75 DST=134.94.192.150 LEN=52 TOS=0x10 PREC=0x00 TTL=62 ID=32860 DF PROTO=TCP SPT=22 DPT=47251 WINDOW=267 RES=0x00 ACK URGP=0 
+[ 6671.750528] dropped package IN=eth0 OUT= MAC=bc:ae:c5:34:39:0d:00:1e:67:2c:26:6d:08:00 SRC=134.94.180.75 DST=134.94.192.150 LEN=52 TOS=0x10 PREC=0x00 TTL=62 ID=32861 DF PROTO=TCP SPT=22 DPT=47251 WINDOW=267 RES=0x00 ACK URGP=0 
+[ 6747.012111] dropped package IN=eth0 OUT= MAC=bc:ae:c5:34:39:0d:00:1e:67:2c:26:6d:08:00 SRC=134.94.180.75 DST=134.94.192.150 LEN=52 TOS=0x10 PREC=0x00 TTL=62 ID=32862 DF PROTO=TCP SPT=22 DPT=47251 WINDOW=267 RES=0x00 ACK URGP=0 
+[ 6822.273720] dropped package IN=eth0 OUT= MAC=bc:ae:c5:34:39:0d:00:1e:67:2c:26:6d:08:00 SRC=134.94.180.75 DST=134.94.192.150 LEN=52 TOS=0x10 PREC=0x00 TTL=62 ID=32863 DF PROTO=TCP SPT=22 DPT=47251 WINDOW=267 RES=0x00 ACK URGP=0 
+[ 6897.535220] dropped package IN=eth0 OUT= MAC=bc:ae:c5:34:39:0d:00:1e:67:2c:26:6d:08:00 SRC=134.94.180.75 DST=134.94.192.150 LEN=52 TOS=0x10 PREC=0x00 TTL=62 ID=32864 DF PROTO=TCP SPT=22 DPT=47251 WINDOW=267 RES=0x00 ACK URGP=0 
+[ 6972.796796] dropped package IN=eth0 OUT= MAC=bc:ae:c5:34:39:0d:00:1e:67:2c:26:6d:08:00 SRC=134.94.180.75 DST=134.94.192.150 LEN=52 TOS=0x10 PREC=0x00 TTL=62 ID=32865 DF PROTO=TCP SPT=22 DPT=47251 WINDOW=267 RES=0x00 ACK URGP=0 
+[ 7048.058406] dropped package IN=eth0 OUT= MAC=bc:ae:c5:34:39:0d:00:1e:67:2c:26:6d:08:00 SRC=134.94.180.75 DST=134.94.192.150 LEN=52 TOS=0x10 PREC=0x00 TTL=62 ID=32866 DF PROTO=TCP SPT=22 DPT=47251 WINDOW=267 RES=0x00 ACK URGP=0 
+[ 7123.319981] dropped package IN=eth0 OUT= MAC=bc:ae:c5:34:39:0d:00:1e:67:2c:26:6d:08:00 SRC=134.94.180.75 DST=134.94.192.150 LEN=52 TOS=0x10 PREC=0x00 TTL=62 ID=32867 DF PROTO=TCP SPT=22 DPT=47251 WINDOW=267 RES=0x00 ACK RST URGP=0 
+[11011.331655] sis1100[0]: 3100: berr_time=12500 ns
+[11011.331660] sis1100[0]: 3100: long_time=10 ms
+[11011.331731] sis1100[0]: 3100: berr_time=12500 ns
+[11011.331734] sis1100[0]: 3100: long_time=10 ms
+[11054.894328] sis1100[0]: 3100: berr_time=12500 ns
+[11054.894331] sis1100[0]: 3100: long_time=10 ms
+[11054.894352] sis1100[0]: 3100: berr_time=12500 ns
+[11054.894354] sis1100[0]: 3100: long_time=10 ms
+[11091.876642] sis1100[0]: 3100: berr_time=12500 ns
+[11091.876649] sis1100[0]: 3100: long_time=10 ms
+[11091.876696] sis1100[0]: 3100: berr_time=12500 ns
+[11091.876700] sis1100[0]: 3100: long_time=10 ms
+[11094.278076] sis1100[0]: 3100: berr_time=12500 ns
+[11094.278081] sis1100[0]: 3100: long_time=10 ms
+[11094.278106] sis1100[0]: 3100: berr_time=12500 ns
+[11094.278109] sis1100[0]: 3100: long_time=10 ms
+[11418.316729] sis1100[0]: 3100: berr_time=12500 ns
+[11418.316733] sis1100[0]: 3100: long_time=10 ms
+[11418.316769] sis1100[0]: 3100: berr_time=12500 ns
+[11418.316772] sis1100[0]: 3100: long_time=10 ms
+[11503.025658] sis1100[0]: 3100: berr_time=12500 ns
+[11503.025663] sis1100[0]: 3100: long_time=10 ms
+[11503.025687] sis1100[0]: 3100: berr_time=12500 ns
+[11503.025690] sis1100[0]: 3100: long_time=10 ms
+[12665.292583] CE: hpet increased min_delta_ns to 20113 nsec
+[12747.940178] sis1100[0]: 3100: berr_time=12500 ns
+[12747.940183] sis1100[0]: 3100: long_time=10 ms
+[12747.940207] sis1100[0]: 3100: berr_time=12500 ns
+[12747.940210] sis1100[0]: 3100: long_time=10 ms
+[67089.835345] sis1100[0]: 3100: berr_time=12500 ns
+[67089.835350] sis1100[0]: 3100: long_time=10 ms
+[67089.835374] sis1100[0]: 3100: berr_time=12500 ns
+[67089.835377] sis1100[0]: 3100: long_time=10 ms
+[67347.233831] hrtimer: interrupt took 20188 ns
+[83593.920158] sis1100[0]: 3100: berr_time=12500 ns
+[83593.920159] sis1100[0]: 3100: long_time=10 ms
+[83593.920199] sis1100[0]: 3100: berr_time=12500 ns
+[83593.920200] sis1100[0]: 3100: long_time=10 ms
+[84419.702064] ptrace of non-child pid 7436 was attempted by: gdb (pid 7457)
+[84626.702654] ptrace of non-child pid 7435 was attempted by: gdb (pid 7577)
+[84771.673129] sis1100[0]: 3100: berr_time=12500 ns
+[84771.673134] sis1100[0]: 3100: long_time=10 ms
+[84771.673158] sis1100[0]: 3100: berr_time=12500 ns
+[84771.673161] sis1100[0]: 3100: long_time=10 ms
+[88550.514103] sis1100[0]: 3100: berr_time=12500 ns
+[88550.514107] sis1100[0]: 3100: long_time=10 ms
+[88550.514160] sis1100[0]: 3100: berr_time=12500 ns
+[88550.514169] sis1100[0]: 3100: long_time=10 ms
+[89191.136899] sis1100[0]: 3100: berr_time=12500 ns
+[89191.136900] sis1100[0]: 3100: long_time=10 ms
+[89191.136919] sis1100[0]: 3100: berr_time=12500 ns
+[89191.136920] sis1100[0]: 3100: long_time=10 ms
+[89209.692801] ptrace of non-child pid 8282 was attempted by: gdb (pid 8298)
+[89215.892573] ptrace of non-child pid 8304 was attempted by: gdb (pid 8319)
+[89222.558947] ptrace of non-child pid 8325 was attempted by: gdb (pid 8340)
+[89224.432075] ptrace of non-child pid 8346 was attempted by: gdb (pid 8361)
+[89225.547588] ptrace of non-child pid 8367 was attempted by: gdb (pid 8382)
+[89394.953999] sis1100[0]: 3100: berr_time=12500 ns
+[89394.954003] sis1100[0]: 3100: long_time=10 ms
+[89394.954027] sis1100[0]: 3100: berr_time=12500 ns
+[89394.954030] sis1100[0]: 3100: long_time=10 ms
+[91960.239717] sis1100[0]: 3100: berr_time=12500 ns
+[91960.239722] sis1100[0]: 3100: long_time=10 ms
+[91960.239745] sis1100[0]: 3100: berr_time=12500 ns
+[91960.239748] sis1100[0]: 3100: long_time=10 ms
+[95724.353151] sis1100[0]: 3100: berr_time=12500 ns
+[95724.353155] sis1100[0]: 3100: long_time=10 ms
+[95724.353192] sis1100[0]: 3100: berr_time=12500 ns
+[95724.353194] sis1100[0]: 3100: long_time=10 ms
+[96295.810543] sis1100[0]: 3100: berr_time=12500 ns
+[96295.810548] sis1100[0]: 3100: long_time=10 ms
+[96295.810572] sis1100[0]: 3100: berr_time=12500 ns
+[96295.810575] sis1100[0]: 3100: long_time=10 ms
+[96398.252663] sis1100[0]: 3100: berr_time=12500 ns
+[96398.252665] sis1100[0]: 3100: long_time=10 ms
+[96398.252683] sis1100[0]: 3100: berr_time=12500 ns
+[96398.252685] sis1100[0]: 3100: long_time=10 ms
+[152571.909046] ptrace of non-child pid 10678 was attempted by: gdb (pid 10693)
+[152580.532696] ptrace of non-child pid 10699 was attempted by: gdb (pid 10714)
+[152758.768945] sis1100[0]: 3100: berr_time=12500 ns
+[152758.768950] sis1100[0]: 3100: long_time=10 ms
+[152758.768974] sis1100[0]: 3100: berr_time=12500 ns
+[152758.768977] sis1100[0]: 3100: long_time=10 ms
+[154403.312709] sis1100[0]: 3100: berr_time=12500 ns
+[154403.312714] sis1100[0]: 3100: long_time=10 ms
+[154403.312738] sis1100[0]: 3100: berr_time=12500 ns
+[154403.312741] sis1100[0]: 3100: long_time=10 ms
+[156047.028706] sis1100[0]: 3100: berr_time=12500 ns
+[156047.028711] sis1100[0]: 3100: long_time=10 ms
+[156047.028735] sis1100[0]: 3100: berr_time=12500 ns
+[156047.028738] sis1100[0]: 3100: long_time=10 ms
+[159564.375629] sis1100[0]: 3100: berr_time=12500 ns
+[159564.375632] sis1100[0]: 3100: long_time=10 ms
+[159564.375652] sis1100[0]: 3100: berr_time=12500 ns
+[159564.375654] sis1100[0]: 3100: long_time=10 ms
+[161125.035243] ptrace of non-child pid 11977 was attempted by: gdb (pid 12001)
+[166366.544599] sis1100[0]: 3100: berr_time=12500 ns
+[166366.544604] sis1100[0]: 3100: long_time=10 ms
+[166366.544628] sis1100[0]: 3100: berr_time=12500 ns
+[166366.544631] sis1100[0]: 3100: long_time=10 ms
+huagen@ikp475:~$ ls -l /var/log
+total 3072
+drwxr-xr-x 2 root              root   4096 Jul  1 07:55 ConsoleKit
+-rw-r--r-- 1 root              root  60931 Jul  3 11:59 Xorg.0.log
+-rw-r--r-- 1 root              root  60931 Jun 30 17:56 Xorg.0.log.old
+-rw-r--r-- 1 root              root  61244 Jun 11 09:33 Xorg.1.log
+-rw-r--r-- 1 root              root  63331 Jun 11 09:33 Xorg.1.log.old
+-rw-r--r-- 1 root              root   6659 Mar 25  2011 Xorg.2.log
+-rw-r--r-- 1 root              root   6659 Mar 25  2011 Xorg.3.log
+-rw-r--r-- 1 root              root   6659 Mar 25  2011 Xorg.4.log
+-rw-r--r-- 1 root              root   6659 Mar 25  2011 Xorg.5.log
+-rw-r--r-- 1 root              root  60401 Jan 16 10:33 Xorg.failsafe.log
+-rw-r--r-- 1 root              root     64 Jan 16 10:33 Xorg.failsafe.log.old
+-rw-r--r-- 1 root              root      0 May 19 07:55 alternatives.log
+-rw-r--r-- 1 root              root    970 May 18 18:26 alternatives.log.1
+-rw-r--r-- 1 root              root    127 Jun  1  2011 alternatives.log.10.gz
+-rw-r--r-- 1 root              root   5183 May 26  2011 alternatives.log.11.gz
+-rw-r--r-- 1 root              root    951 Apr 26  2011 alternatives.log.12.gz
+-rw-r--r-- 1 root              root    805 Mar 18 16:35 alternatives.log.2.gz
+-rw-r--r-- 1 root              root    683 Jan 16 09:05 alternatives.log.3.gz
+-rw-r--r-- 1 root              root    999 Jan 11 18:54 alternatives.log.4.gz
+-rw-r--r-- 1 root              root   9336 Nov 30  2012 alternatives.log.5.gz
+-rw-r--r-- 1 root              root    322 Oct 18  2012 alternatives.log.6.gz
+-rw-r--r-- 1 root              root    379 Oct 17  2012 alternatives.log.7.gz
+-rw-r--r-- 1 root              root    459 Aug  2  2011 alternatives.log.8.gz
+-rw-r--r-- 1 root              root    419 Jul  7  2011 alternatives.log.9.gz
+drwxr-xr-x 2 root              root   4096 Sep 27  2010 apparmor
+-rw-r----- 1 root              adm     375 Jul  4 11:54 apport.log
+-rw-r----- 1 root              adm     371 Jul  3 14:39 apport.log.1
+-rw-r----- 1 root              adm     257 Jun 29 18:57 apport.log.2.gz
+-rw-r----- 1 root              adm     258 Jun 27 11:37 apport.log.3.gz
+-rw-r----- 1 root              adm     226 Jun 26 13:52 apport.log.4.gz
+-rw-r----- 1 root              adm     256 Jun 25 16:50 apport.log.5.gz
+-rw-r----- 1 root              adm    1475 Jun 24 17:53 apport.log.6.gz
+-rw-r----- 1 root              adm    1137 Jun 23 19:55 apport.log.7.gz
+drwxr-xr-x 2 root              root   4096 Jun  1 08:01 apt
+-rw-r--r-- 1 root              root      0 Apr  1 07:35 aptitude
+-rw-r--r-- 1 root              root   1178 Mar 18 16:35 aptitude.1.gz
+-rw-r----- 1 syslog            adm   46593 Jul  4 15:50 auth.log
+-rw-r----- 1 syslog            adm   49152 Jun 30 07:30 auth.log.1
+-rw-r----- 1 syslog            adm    4341 Jun 23 07:30 auth.log.2.gz
+-rw-r----- 1 syslog            adm    4029 Jun 16 07:30 auth.log.3.gz
+-rw-r----- 1 syslog            adm    6180 Jun  9 07:30 auth.log.4.gz
+-rw-r----- 1 root              adm      31 Oct  7  2010 boot
+-rw-r--r-- 1 root              root   4810 Jul  2 15:09 boot.log
+-rw-r--r-- 1 root              root  41377 Oct  7  2010 bootstrap.log
+-rw-rw---- 1 root              utmp      0 Jul  1 07:55 btmp
+-rw-rw---- 1 root              utmp      0 Jun  1 08:01 btmp.1
+-rw-rw---- 1 root              utmp     20 Oct  1  2012 btmp.1.gz
+drwxr-xr-x 2 root              root   4096 Jun 27 07:53 cups
+-rw-r----- 1 syslog            adm       0 May  8  2011 daemon.log
+-rw-r----- 1 syslog            adm  193540 May  2  2011 daemon.log.1
+-rw-r----- 1 syslog            adm   35614 May  1  2011 daemon.log.2.gz
+-rw-r----- 1 syslog            adm   50739 Apr 24  2011 daemon.log.3.gz
+-rw-r----- 1 syslog            adm   67089 Apr 17  2011 daemon.log.4.gz
+-rw-r----- 1 syslog            adm       0 May  1  2011 debug
+-rw-r----- 1 syslog            adm   29332 Apr 27  2011 debug.1
+-rw-r----- 1 syslog            adm    3976 Apr 20  2011 debug.2.gz
+-rw-r----- 1 syslog            adm    7956 Apr 14  2011 debug.3.gz
+-rw-r----- 1 syslog            adm     149 Apr  4  2011 debug.4.gz
+drwxr-xr-x 5 root              root   4096 Nov 18  2012 dist-upgrade
+-rw-r----- 1 root              adm   66100 Jul  2 15:09 dmesg
+-rw-r----- 1 root              adm   61081 Jun 30 17:56 dmesg.0
+-rw-r----- 1 root              adm   15456 Jun 18 11:15 dmesg.1.gz
+-rw-r----- 1 root              adm   15394 Jun 17 15:49 dmesg.2.gz
+-rw-r----- 1 root              adm   15660 Jun 11 11:12 dmesg.3.gz
+-rw-r----- 1 root              adm   15178 Apr 24 14:52 dmesg.4.gz
+-rw-r--r-- 1 root              root      0 Jun  1 08:01 dpkg.log
+-rw-r--r-- 1 root              root  17471 May 18 18:31 dpkg.log.1
+-rw-r--r-- 1 root              root    438 Apr 17  2012 dpkg.log.10.gz
+-rw-r--r-- 1 root              root    260 Mar  2  2012 dpkg.log.11.gz
+-rw-r--r-- 1 root              root    451 Feb 21  2012 dpkg.log.12.gz
+-rw-r--r-- 1 root              root    633 May 15 10:40 dpkg.log.2.gz
+-rw-r--r-- 1 root              root   7273 Mar 18 16:56 dpkg.log.3.gz
+-rw-r--r-- 1 root              root    476 Mar  1 13:19 dpkg.log.4.gz
+-rw-r--r-- 1 root              root   1560 Jan 27 12:54 dpkg.log.5.gz
+-rw-r--r-- 1 root              root   3105 Jan 11 18:56 dpkg.log.6.gz
+-rw-r--r-- 1 root              root 312718 Nov 30  2012 dpkg.log.7.gz
+-rw-r--r-- 1 root              root  10692 Oct 18  2012 dpkg.log.8.gz
+-rw-r--r-- 1 root              root   3461 Oct 17  2012 dpkg.log.9.gz
+-rw-r--r-- 1 root              root  32160 May 18 18:26 faillog
+-rw-r--r-- 1 root              root   3084 Nov 18  2012 fontconfig.log
+drwxr-xr-x 2 root              root   4096 Oct  7  2010 fsck
+drwxrwx--T 2 root              gdm    4096 Nov 18  2012 gdm
+-rw-r--r-- 1 root              root   1082 Mar 30  2011 gufw_log.txt
+-rw-r--r-- 1 root              root    707 Mar 30  2011 gufw_log_server.txt
+drwxr-xr-x 2 root              root   4096 Apr  4  2012 hp
+drwxr-xr-x 2 root              root   4096 Nov 18  2012 installer
+-rw-r--r-- 1 root              root      0 Mar 31  2011 iptables_ruleset-2011-03-31.txt
+-rw-r--r-- 1 root              root   1572 Apr  5  2011 iptables_ruleset-2011-04-05.txt
+-rw-r--r-- 1 root              root      0 Apr 12  2011 iptables_ruleset-2011-04-12.txt
+-rw-r--r-- 1 root              root      0 Apr 14  2011 iptables_ruleset-2011-04-14.txt
+-rw-r--r-- 1 root              root      0 Apr 19  2011 iptables_ruleset-2011-04-19.txt
+-rw-r--r-- 1 root              root      0 Apr 26  2011 iptables_ruleset-2011-04-26.txt
+-rw-r--r-- 1 root              root      0 May  2  2011 iptables_ruleset-2011-05-02.txt
+-rw-r--r-- 1 root              root      0 May  3  2011 iptables_ruleset-2011-05-03.txt
+-rw-r--r-- 1 root              root      0 May 28  2011 iptables_ruleset-2011-05-28.txt
+-rw-r--r-- 1 root              root      0 May 29  2011 iptables_ruleset-2011-05-29.txt
+-rw-r--r-- 1 root              root      0 Jul  7  2011 iptables_ruleset-2011-07-07.txt
+-rw-r--r-- 1 root              root      0 Aug  1  2011 iptables_ruleset-2011-08-01.txt
+-rw-r--r-- 1 root              root      0 Aug 29  2011 iptables_ruleset-2011-08-29.txt
+-rw-r--r-- 1 root              root      0 Aug 30  2011 iptables_ruleset-2011-08-30.txt
+-rw-r--r-- 1 root              root      0 Aug 31  2011 iptables_ruleset-2011-08-31.txt
+-rw-r--r-- 1 root              root      0 Oct 12  2011 iptables_ruleset-2011-10-12.txt
+-rw-r--r-- 1 root              root      0 Jan  4  2012 iptables_ruleset-2012-01-04.txt
+-rw-r--r-- 1 root              root      0 Feb 15  2012 iptables_ruleset-2012-02-15.txt
+-rw-r--r-- 1 root              root      0 Feb 22  2012 iptables_ruleset-2012-02-22.txt
+-rw-r--r-- 1 root              root      0 Mar  4  2012 iptables_ruleset-2012-03-04.txt
+-rw-r--r-- 1 root              root      0 Mar  7  2012 iptables_ruleset-2012-03-07.txt
+-rw-r--r-- 1 root              root      0 Apr  3  2012 iptables_ruleset-2012-04-03.txt
+-rw-r--r-- 1 root              root      0 Apr 18  2012 iptables_ruleset-2012-04-18.txt
+-rw-r--r-- 1 root              root      0 Apr 20  2012 iptables_ruleset-2012-04-20.txt
+-rw-r--r-- 1 root              root      0 May  2  2012 iptables_ruleset-2012-05-02.txt
+-rw-r--r-- 1 root              root      0 May  9  2012 iptables_ruleset-2012-05-09.txt
+-rw-r--r-- 1 root              root      0 May 11  2012 iptables_ruleset-2012-05-11.txt
+-rw-r--r-- 1 root              root      0 May 14  2012 iptables_ruleset-2012-05-14.txt
+-rw-r--r-- 1 root              root      0 May 16  2012 iptables_ruleset-2012-05-16.txt
+-rw-r--r-- 1 root              root      0 May 27  2012 iptables_ruleset-2012-05-27.txt
+-rw-r--r-- 1 root              root      0 Jun 22  2012 iptables_ruleset-2012-06-22.txt
+-rw-r--r-- 1 root              root      0 Jul  2  2012 iptables_ruleset-2012-07-02.txt
+-rw-r--r-- 1 root              root      0 Jul 31  2012 iptables_ruleset-2012-07-31.txt
+-rw-r--r-- 1 root              root      0 Sep  5  2012 iptables_ruleset-2012-09-05.txt
+-rw-r--r-- 1 root              root      0 Sep 17  2012 iptables_ruleset-2012-09-17.txt
+-rw-r--r-- 1 root              root      0 Oct 18  2012 iptables_ruleset-2012-10-18.txt
+-rw-r--r-- 1 root              root      0 Nov 18  2012 iptables_ruleset-2012-11-18.txt
+-rw-r--r-- 1 root              root      0 Nov 29  2012 iptables_ruleset-2012-11-29.txt
+-rw-r--r-- 1 root              root      0 Nov 30  2012 iptables_ruleset-2012-11-30.txt
+-rw-r--r-- 1 root              root      0 Dec 30  2012 iptables_ruleset-2012-12-30.txt
+-rw-r--r-- 1 root              root      0 Jan  2  2013 iptables_ruleset-2013-01-02.txt
+-rw-r--r-- 1 root              root      0 Jan  7 14:00 iptables_ruleset-2013-01-07.txt
+-rw-r--r-- 1 root              root      0 Jan 11 19:11 iptables_ruleset-2013-01-11.txt
+-rw-r--r-- 1 root              root      0 Jan 15 16:54 iptables_ruleset-2013-01-15.txt
+-rw-r--r-- 1 root              root      0 Jan 16 11:41 iptables_ruleset-2013-01-16.txt
+-rw-r--r-- 1 root              root      0 Feb  6 14:58 iptables_ruleset-2013-02-06.txt
+-rw-r--r-- 1 root              root      0 Mar 18 16:52 iptables_ruleset-2013-03-18.txt
+-rw-r--r-- 1 root              root      0 Apr 15 11:36 iptables_ruleset-2013-04-15.txt
+-rw-r--r-- 1 root              root      0 Apr 21 18:01 iptables_ruleset-2013-04-21.txt
+-rw-r--r-- 1 root              root      0 Apr 24 14:52 iptables_ruleset-2013-04-24.txt
+-rw-r--r-- 1 root              root      0 Jun 11 11:12 iptables_ruleset-2013-06-11.txt
+-rw-r--r-- 1 root              root      0 Jun 17 15:49 iptables_ruleset-2013-06-17.txt
+-rw-r--r-- 1 root              root      0 Jun 18 11:15 iptables_ruleset-2013-06-18.txt
+-rw-r--r-- 1 root              root      0 Jun 30 17:56 iptables_ruleset-2013-06-30.txt
+-rw-r--r-- 1 root              root      0 Jul  2 15:09 iptables_ruleset-2013-07-02.txt
+-rw-r--r-- 1 root              root   1567 Jul  2 15:09 iptables_ruleset_current.txt
+-rw-r--r-- 1 root              root      0 Jan 17 07:51 jockey.log
+-rw-r--r-- 1 root              root  40280 Jan 17 07:51 jockey.log.1
+-rw-r--r-- 1 root              root   9975 Nov 30  2012 jockey.log.2.gz
+-rw-r--r-- 1 root              root   6199 Apr 14  2011 jockey.log.3.gz
+-rw-r--r-- 1 root              root   6268 Mar 26  2011 jockey.log.4.gz
+-rw-r----- 1 syslog            adm  205132 Jul  4 13:21 kern.log
+-rw-r----- 1 syslog            adm  108719 Jun 29 19:05 kern.log.1
+-rw-r----- 1 syslog            adm   49116 Jun 21 19:15 kern.log.2.gz
+-rw-r----- 1 syslog            adm   46878 Jun 16 07:16 kern.log.3.gz
+-rw-r----- 1 syslog            adm   29079 Jun  9 07:20 kern.log.4.gz
+-rw-rw-r-- 1 root              utmp 293460 Jul  4 15:50 lastlog
+drwxr-xr-x 2 root              root   4096 Jul  2 15:09 lightdm
+-rw-r----- 1 syslog            adm       0 Mar 25  2011 lpr.log
+-rw-r----- 1 syslog            adm       0 Mar 25  2011 mail.err
+-rw-r----- 1 syslog            adm       0 Mar 25  2011 mail.info
+-rw-r----- 1 syslog            adm       0 Mar 25  2011 mail.log
+-rw-r----- 1 syslog            adm       0 Mar 25  2011 mail.warn
+-rw-r----- 1 syslog            adm       0 May  8  2011 messages
+-rw-r----- 1 syslog            adm   20303 May  2  2011 messages.1
+-rw-r----- 1 syslog            adm   15013 May  1  2011 messages.2.gz
+-rw-r----- 1 syslog            adm   14933 Apr 24  2011 messages.3.gz
+-rw-r----- 1 syslog            adm   27673 Apr 17  2011 messages.4.gz
+drwxr-xr-x 2 root              root   4096 Mar 25  2011 news
+-rw-r--r-- 1 root              root   1848 Jan 11 19:09 nvidia-installer.log
+-rw------- 1 nx                root      0 May 18 18:27 nxserver.log
+drwx------ 2 root              root   4096 Aug  5  2010 pawserv
+-rw------- 1 root              root      0 Nov 18  2012 pawserv.log
+-rw-r--r-- 1 root              root   6183 Jul  2 15:09 pm-powersave.log
+-rw-r--r-- 1 root              root  18471 Jun 30 17:56 pm-powersave.log.1
+-rw-r--r-- 1 root              root    588 Jun 11 11:12 pm-powersave.log.2.gz
+-rw-r--r-- 1 root              root    714 Apr 24 14:52 pm-powersave.log.3.gz
+-rw-r--r-- 1 root              root    618 Mar 18 16:52 pm-powersave.log.4.gz
+-rw-r--r-- 1 root              root      0 Dec  1  2012 pm-suspend.log
+-rw-r--r-- 1 root              root   9186 Nov 30  2012 pm-suspend.log.1
+-rw-r--r-- 1 root              root   1945 Aug  1  2011 pm-suspend.log.2.gz
+-rw-r--r-- 1 root              root   1943 Mar 30  2011 pm-suspend.log.3.gz
+-rw-r--r-- 1 root              root      0 Oct  7  2010 pycentral.log
+drwxr-xr-x 2 root              root   4096 Oct  6  2010 samba
+drwxr-xr-x 2 speech-dispatcher root   4096 Aug 12  2010 speech-dispatcher
+-rw-r----- 1 syslog            adm    5750 Jul  4 15:50 syslog
+-rw-r----- 1 syslog            adm   14073 Jul  4 08:00 syslog.1
+-rw-r----- 1 syslog            adm   22637 Jul  3 07:35 syslog.2.gz
+-rw-r----- 1 syslog            adm    1441 Jul  2 07:35 syslog.3.gz
+-rw-r----- 1 syslog            adm   22205 Jul  1 07:35 syslog.4.gz
+-rw-r----- 1 syslog            adm    2567 Jun 30 07:35 syslog.5.gz
+-rw-r----- 1 syslog            adm     842 Jun 29 07:35 syslog.6.gz
+-rw-r----- 1 syslog            adm    1345 Jun 28 07:35 syslog.7.gz
+-rw-r--r-- 1 root              root 340201 Jul  2 15:09 udev
+-rw-r----- 1 syslog            adm       0 Apr  3  2011 ufw.log
+-rw-r----- 1 syslog            adm   14002 Mar 30  2011 ufw.log.1
+-rw-r----- 1 syslog            adm     844 Mar 27  2011 ufw.log.2.gz
+drwxr-xr-x 2 root              root   4096 Aug 26  2010 unattended-upgrades
+drwxr-xr-x 2 root              root  12288 Jul  3 07:52 upstart
+-rw-r----- 1 syslog            adm       0 May  8  2011 user.log
+-rw-r----- 1 syslog            adm    5845 May  2  2011 user.log.1
+-rw-r----- 1 syslog            adm    1950 Apr 28  2011 user.log.2.gz
+-rw-r----- 1 syslog            adm    1787 Apr 21  2011 user.log.3.gz
+-rw-r----- 1 syslog            adm    1853 Apr 14  2011 user.log.4.gz
+-rw-rw-r-- 1 root              utmp  34560 Jul  4 15:50 wtmp
+-rw-rw-r-- 1 root              utmp 168960 Jun 30 22:21 wtmp.1
+-rw-rw-r-- 1 root              utmp   1009 Oct 30  2012 wtmp.1.gz
+huagen@ikp475:~$ ls -l /var/log/ems
+ls: cannot access /var/log/ems: No such file or directory
+huagen@ikp475:~$ logout
+Connection to ikp475-a closed.
+huagen@ikp509: ssh -Y ikp475-a
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+8 packages can be updated.
+0 updates are security updates.
+
+New release '12.10' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Last login: Thu Jul  4 15:50:55 2013 from ikp509
+huagen@ikp475:~$ logout
+Connection to ikp475-a closed.
+huagen@ikp509: ssh -Y ikp475-a
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+8 packages can be updated.
+0 updates are security updates.
+
+New release '12.10' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Last login: Thu Jul  4 15:54:40 2013 from ikp509
+huagen@ikp475:~$ logout
+Connection to ikp475-a closed.
+huagen@ikp509: ssh -Y ikp475-a\
+> 
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+8 packages can be updated.
+0 updates are security updates.
+
+New release '12.10' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Last login: Thu Jul  4 15:54:47 2013 from ikp509
+huagen@ikp475:~$ cd ems/common/
+huagen@ikp475:~/ems/common$ ls
+CVS              emsctypes.h.in     human_size.c            objectnums.txt     swap.h
+GNUmakefile.osk  emssocktypes.h.in  human_size.h            objectstrings.c    unsoltypes.d.m4
+Makefile.in      errorarrs.tcl.m4   intmsgtypes.h.m4        objecttypes.h      unsoltypes.f.m4
+actiontypes.h    errorcodes.d.m4    intmsgtypes.inc         patchlevel         unsoltypes.h.m4
+cdefs.h          errorcodes.f.m4    modulnames.c            patfile            unsoltypes.inc
+clusterformat.h  errorcodes.h.m4    modulnames.h            rcs_ids.c          unsoltypes.txt
+config.h.in      errorcodes.inc     modultypeinfo.c.m4      rcs_ids.h          xdrfloat.c
+configure        errorcodes.inc.de  modultypeinfo.h         reqstrings.c.m4    xdrfloat.h      
+configure.in     errorcodes.num     modultypes.h.m4         reqstrings.h       xdrstring.c
+conststrings.c   errorcodes.tex.m4  modultypes.inc          requestarr.tcl.m4  xdrstring.h
+conststrings.h   errorstring.c.m4   modultypes.inc~         requestnums.txt    xprintf.c
+debug.h          eventformat.h      modultypes.tcl.m4       requesttypes.h.m4  xprintf.h
+ems_err.f.m4     get_mount_dev.c    modultypes_arr.tcl      requesttypes.inc
+ems_err.h.m4     get_mount_dev.h    modultypes_arr.tcl.bak  strdup.c
+ems_err.inc      getcap.c           modultypes_arr.tcl.m4   strdup.h
+ems_errstr.c.m4  getcap.h           msg.h                   swap.c
+huagen@ikp475:~/ems/common$ rm modultypes_arr.tcl modultypes_arr.tcl.bak
+huagen@ikp475:~/ems/common$ cd ../build/common/
+huagen@ikp475:~/ems/build/common$ make
+m4 -DEMSDEFS=../../common <../../common/modultypes_arr.tcl.m4 >modultypes_arr.tcl
+huagen@ikp475:~/ems/build/common$ ls -lrt
+total 328
+-rwxrwxr-x 1 huagen huagen 28258 Jul  4 15:55 config.status
+-rw-rw-r-- 1 huagen huagen  3002 Jul  4 15:55 Makefile
+-rw-rw-r-- 1 huagen huagen   412 Jul  4 15:55 emsctypes.h
+-rw-rw-r-- 1 huagen huagen   196 Jul  4 15:55 emssocktypes.h
+-rw-rw-r-- 1 huagen huagen   433 Jul  4 15:55 config.h
+-rw-rw-r-- 1 huagen huagen 19698 Jul  4 15:55 config.log
+-rw-rw-r-- 1 huagen huagen  1480 Jul  4 15:56 ems_err.h
+-rw-rw-r-- 1 huagen huagen  1826 Jul  4 15:56 ems_err.f
+-rw-rw-r-- 1 huagen huagen  2810 Jul  4 15:56 errorcodes.h
+-rw-rw-r-- 1 huagen huagen  4817 Jul  4 15:56 errorcodes.f
+-rw-rw-r-- 1 huagen huagen  2029 Jul  4 15:56 requesttypes.h
+-rw-rw-r-- 1 huagen huagen  1485 Jul  4 15:56 unsoltypes.h
+-rw-rw-r-- 1 huagen huagen  1425 Jul  4 15:56 unsoltypes.f
+-rw-rw-r-- 1 huagen huagen  1354 Jul  4 15:56 intmsgtypes.h
+-rw-rw-r-- 1 huagen huagen  7593 Jul  4 15:56 modultypes.h
+-rw-rw-r-- 1 huagen huagen  5937 Jul  4 15:56 modultypes.tcl
+-rw-rw-r-- 1 huagen huagen  2290 Jul  4 15:56 requestarr.tcl
+-rw-rw-r-- 1 huagen huagen  3515 Jul  4 15:56 errorarrs.tcl
+-rw-rw-r-- 1 huagen huagen  2087 Jul  4 15:56 ems_errstr.c
+-rw-rw-r-- 1 huagen huagen  6041 Jul  4 15:56 errorstring.c
+-rw-rw-r-- 1 huagen huagen  1484 Jul  4 15:56 reqstrings.c
+-rw-rw-r-- 1 huagen huagen  5047 Jul  4 15:56 modultypeinfo.c
+-rw-rw-r-- 1 huagen huagen  4704 Jul  4 15:56 ems_errstr.o
+-rw-rw-r-- 1 huagen huagen 11760 Jul  4 15:56 errorstring.o
+-rw-rw-r-- 1 huagen huagen  5496 Jul  4 15:56 reqstrings.o
+-rw-rw-r-- 1 huagen huagen 10968 Jul  4 15:56 modultypeinfo.o
+-rw-rw-r-- 1 huagen huagen  2224 Jul  4 15:56 swap.o
+-rw-rw-r-- 1 huagen huagen  3848 Jul  4 15:56 xdrstring.o
+-rw-rw-r-- 1 huagen huagen  9088 Jul  4 15:56 conststrings.o
+-rw-rw-r-- 1 huagen huagen  2880 Jul  4 15:56 modulnames.o
+-rw-rw-r-- 1 huagen huagen  2624 Jul  4 15:56 objectstrings.o
+-rw-rw-r-- 1 huagen huagen  3840 Jul  4 15:56 rcs_ids.o
+-rw-rw-r-- 1 huagen huagen  5176 Jul  4 15:56 get_mount_dev.o
+-rw-rw-r-- 1 huagen huagen  3192 Jul  4 15:56 human_size.o
+-rw-rw-r-- 1 huagen huagen  3904 Jul  4 15:56 xprintf.o
+-rw-rw-r-- 1 huagen huagen  5632 Jul  4 15:56 getcap.o
+lrwxrwxrwx 1 huagen huagen    15 Jul  4 15:56 libcommon.a -> libcommon.3.1.a
+-rw-rw-r-- 1 huagen huagen 76998 Jul  4 15:56 libcommon.3.1.a
+-rw-rw-r-- 1 huagen huagen  6773 Jul  4 16:19 modultypes_arr.tcl
+huagen@ikp475:~/ems/build/common$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:ikp-admin,huagen,stockman,peter,dieter
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:ikp-admin,huagen,stockman,peter,dieter
+fax:x:21:huagen,stockman,peter
+voice:x:22:
+cdrom:x:24:ikp-admin,huagen,stockman,peter,dieter
+floppy:x:25:huagen,stockman,peter
+tape:x:26:huagen,stockman,peter
+sudo:x:27:
+audio:x:29:pulse
+dip:x:30:huagen,stockman,peter
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:nx
+video:x:44:huagen,stockman,peter
+sasl:x:45:
+plugdev:x:46:ikp-admin,huagen,stockman,peter,dieter
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+libuuid:x:101:
+crontab:x:102:
+syslog:x:103:
+fuse:x:104:huagen,stockman,peter
+messagebus:x:105:
+mlocate:x:106:
+ssh:x:107:
+avahi-autoipd:x:108:
+avahi:x:109:
+netdev:x:110:
+lpadmin:x:111:ikp-admin,huagen,peter,dieter
+ssl-cert:x:112:
+couchdb:x:113:
+pulse:x:114:
+pulse-access:x:115:
+utempter:x:116:
+rtkit:x:117:
+saned:x:118:
+admin:x:119:ikp-admin,huagen,peter,dieter
+gdm:x:120:
+nopasswdlogin:x:121:
+ikp-admin:x:1000:
+sambashare:x:122:ikp-admin,huagen,peter,dieter
+huagen:x:1001:
+stockman:x:1002:
+haldaemon:x:123:
+rootd:x:124:
+peter:x:1003:
+dieter:x:1004:
+bluetooth:x:125:
+powerdev:x:126:
+lightdm:x:127:
+colord:x:128:
+scanner:x:129:colord
+_cvsadmin:x:130:
+whoopsie:x:131:
+snmp:x:132:
+nx:x:133:
+huagen@ikp475:~/ems/build/common$ cd
+huagen@ikp475:~$ emssh
+no communication
+eemssh8.5> ems_open vme
+ved_vme
+emssh8.5> ved_vme event
+55 0x0001 2 {{100 2 {0x51d58674 0x00079839}} {1 32 {0x00002b3e 0x00003210 0x00002f5d 0x00002c33 0x0000b7cb 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000}}}
+emssh8.5> ved_vme event
+59 0x0001 2 {{100 2 {0x51d58678 0x00079837}} {1 32 {0x00002e95 0x000035a2 0x000032f5 0x00002f51 0x0000c55f 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000}}}
+emssh8.5> 
+huagen@ikp475:~$ cd ems_setup/daq
+huagen@ikp475:~/ems_setup/daq$ ls
+scaler.wad  sis3820.wad
+huagen@ikp475:~/ems_setup/daq$ cp scaler.wad dayone.wad
+huagen@ikp475:~/ems_setup/daq$ cp sis3820.wad vme.wad
+huagen@ikp475:~/ems_setup/daq$ nedit dayone.wad vme.wad
+huagen@ikp475:~/ems_setup/daq$ cd
+huagen@ikp475:~$ rm -r .nedit 
+huagen@ikp475:~$ logout
+Connection to ikp475-a closed.
+huagen@ikp509: ssh -Y ikp475-a
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+8 packages can be updated.
+0 updates are security updates.
+
+New release '12.10' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Last login: Thu Jul  4 15:54:51 2013 from ikp509
+huagen@ikp475:~$ cd -
+-bash: cd: OLDPWD not set
+huagen@ikp475:~$ cd ems_setup/daq
+huagen@ikp475:~/ems_setup/daq$ ls
+dayone.wad  scaler.wad  sis3820.wad  vme.wad
+huagen@ikp475:~/ems_setup/daq$ nedit dayone.wad vme.wad
+^Z
+[1]+  Stopped                 nedit dayone.wad vme.wad
+huagen@ikp475:~/ems_setup/daq$ bg
+[1]+ nedit dayone.wad vme.wad &
+huagen@ikp475:~/ems_setup/daq$ emssh
+no communication
+emssh8.5> ems_open vme
+ved_vme
+emssh8.5> ved_vme event
+41837 0x0001 3 {{100 2 {0x51d58b07 0x00042910}} {1 36 {0x00000001 0x00000022 0x40014021 0x04000034 0x0401002b 0x0410002d 0x0411003c 0x0408003d 0x04090030 0x04180035 0x0419002e 0x04020035 0x0403002f 0x04120029 0x04130036 0x040a002f 0x040b0032 0x041a0035 0x041b002d 0x04040030 0x04050037 0x04140034 0x0415003c 0x040c0039 0x040d002a 0x041c0037 0x041d0032 0x04060035 0x0407002e 0x04160032 0x0417002e 0x040e002f 0x040f0028 0x041e0037 0x041f002e 0xc5e1f743}} {10 32 {0x00003677 0x00004cdd 0x0000440c 0x00003c35 0x0000ee2b 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000}}}
+emssh8.5> ls /data
+lost+found/  newdir/  newfile  sys_backup/
+emssh8.5> df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda5        28G  7.8G   19G  30% /
+udev            3.9G  4.0K  3.9G   1% /dev
+tmpfs           1.6G  900K  1.6G   1% /run
+none            5.0M     0  5.0M   0% /run/lock
+none            3.9G  4.8M  3.9G   1% /run/shm
+/dev/sda1       189M  109M   71M  61% /boot
+/dev/sdb1       2.8T  454G  2.2T  18% /data
+/dev/sda6        19G  914M   17G   6% /usr/local
+/dev/sda7       1.4T  500G  774G  40% /home
+emssh8.5> sudo su
+[sudo] password for huagen: 
+root@ikp475:/home/huagen/ems_setup/daq# mkdir /data/daq
+root@ikp475:/home/huagen/ems_setup/daq# chown huagen.huagen /data/daq
+root@ikp475:/home/huagen/ems_setup/daq# ls -l
+total 24
+-rwxr--r-- 1 huagen huagen  510 Jul  4 16:46 dayone.wad
+-rwxr--r-- 1 huagen huagen  513 Jul  4 16:46 dayone.wad.bck
+-rwxr--r-- 1 huagen huagen  529 Jul  4 15:21 scaler.wad
+-rw-r--r-- 1 huagen huagen 1041 Jul  4 15:36 sis3820.wad
+-rw-r--r-- 1 huagen huagen 1676 Jul  4 16:50 vme.wad
+-rw-r--r-- 1 huagen huagen 1679 Jul  4 16:50 vme.wad.bck
+root@ikp475:/home/huagen/ems_setup/daq# cd /data/daq
+root@ikp475:/data/daq# ls -l
+total 4
+drwxr-xr-x 2 huagen huagen 4096 Jul  4 16:51 2013_07_04
+root@ikp475:/data/daq# cd 2013_07_04/
+root@ikp475:/data/daq/2013_07_04# ls -l
+total 11356
+-rw-r--r-- 1 huagen huagen 11627704 Jul  4 16:51 2013_07_04_14_51_02.cl
+root@ikp475:/data/daq/2013_07_04# ls -l
+total 11992
+-rw-r--r-- 1 huagen huagen 12277080 Jul  4 16:51 2013_07_04_14_51_02.cl
+root@ikp475:/data/daq/2013_07_04# hexdump -c 2013_07_04_14_51_02.cl |less
+root@ikp475:/data/daq/2013_07_04# hexdump 2013_07_04_14_51_02.cl |less
+root@ikp475:/data/daq/2013_07_04# 
+
