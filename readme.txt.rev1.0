@@ -1,0 +1,38 @@
+This file is the brief instruction how to launch the online display with emssh command
+Start communication:
+cd /home/huagen/ems/build/commu
+./commu -nb
+
+Start server:
+cd /home/huagen/ems/build/cc_all/
+./server -l:vmep=/dev/sis1100_00\;sis3100
+(debug: gdb --args ./server -l:vmep=/dev/sis1100_00\;sis3100)
+
+1.launch a termil 
+start emssh with "emssh"
+Open scripts.tcl file(under path:/home/huagen/scripts) 
+type(i.e. copy and paste to emssh terminal) the relevant settings for DAQ settings 
+(before start data taking (i.e. ved readout start) one needs to launch cluster2event)
+after second step, type ved readout start
+
+2.open a terminal
+cd to /home/huagen/ems/build/events++
+./cluster2event -verbose -asynchron -maxmem 10000 :12345 :3333
+
+3. Open a termial to run event_distributor
+cd to /home/huagen/ems/build/events
+./event_distributor localhost:3333 5555
+
+4.open a terminal 
+cd to /home/huagen/code/cluster_decoding/Day1Online
+./datacli localhost 5555
+
+5.open a termial 
+cd to /home/huagen/code/cluster_decoding/Day1Online
+./hisplot
+ 
+
+command:
+hexdump 2013_07_05_14_08_30.cl |less
+
+
