@@ -670,7 +670,7 @@ int decoding(ems_u32 *buffer, int size)
                     h218->Fill(data1[2][17]);
                     h219->Fill(data1[2][18]);
                     h220->Fill(data1[2][19]);
-                    for(int nr=32;nr>32&&nr<48;nr++)
+                    for(int nr=32;nr>31&&nr<48;nr++)
                     Si_13_hits->Fill(Si_13_strip[nr],data1[2][nr-32],1);
           }
 
@@ -679,7 +679,7 @@ int decoding(ems_u32 *buffer, int size)
                     Si_15_hits->Fill(Si_15_strip[nr],data1[3][nr],1);
           }
           if(id==4){
-                    for(int nr=32;nr>32&&nr<64;nr++)
+                    for(int nr=32;nr>31&&nr<64;nr++)
                     Si_15_hits->Fill(Si_15_strip[nr],data1[4][nr-32],1);
 
           }
