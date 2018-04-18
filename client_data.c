@@ -573,7 +573,7 @@ int decoding(ems_u32 *buffer, int size)
 *ADC data
 **********************************************************/
 
-           if((buffer[n]&0xFFF00000) == 0x40100000 || (buffer[n]&0xFFF00000) == 0x40200000 || (buffer[n]&0xFFF00000) == 0x40300000)
+    if((buffer[n]&0xFFF00000) == 0x40100000 || (buffer[n]&0xFFF00000) == 0x40200000 || (buffer[n]&0xFFF00000) == 0x40300000)
 		{
 	//	cout<<"buffer["<<n<<"] is event header"<<endl;
 		int adcres = buffer[n]>>12 & 0x7;		//printf("the ADC resolution is %d \n",adcres);
@@ -641,7 +641,7 @@ int decoding(ems_u32 *buffer, int size)
 	//	cout<<"buffer["<<n<<"] is event header"<<endl;
 		int adcres = buffer[n]>>12 & 0x7;		//printf("the ADC resolution is %d \n",adcres);
 		int nrwords = buffer[n]&0xfff;		//printf("the following words are %d \n",nrwords);
-                int id = (buffer[n]>>16)&0xff;		//printf("the XDC id is %d \n",id);
+    int id = (buffer[n]>>16)&0xff;		//printf("the XDC id is %d \n",id);
 
 		temp_ID=id;
 
@@ -659,7 +659,7 @@ int decoding(ems_u32 *buffer, int size)
 		} //loop one ADC data
 
 	        n += nrwords;
-
+          /*
           if(id==1){
                     for(int nr=0;nr<32;nr++)
                     Si_13_hits->Fill(Si_13_strip[nr],data1[1][nr],1);
@@ -692,6 +692,7 @@ int decoding(ems_u32 *buffer, int size)
                     for(int nr=0;nr<32;nr++)
                     Ge_11mm_hits->Fill(Ge_11mm_strip[nr],data1[6][nr],1);
           }
+          */
 
 		}
 		else if(id==7){//Identify QDC data by module ID
@@ -767,10 +768,10 @@ int decoding(ems_u32 *buffer, int size)
 
 				//if(temp_ID==48){
 
-  						//        h217->Fill(data1[2][16]);
-						  //        h218->Fill(data1[2][17]);
-					   //         h219->Fill(data1[2][18]);
-					   //         h220->Fill(data1[2][19]);
+  						        h217->Fill(data1[2][16]);
+						          h218->Fill(data1[2][17]);
+					            h219->Fill(data1[2][18]);
+					            h220->Fill(data1[2][19]);
 							//printf("data[1][ 16 ] is %d \n", data1[1][16]);
 							//printf("data[1][ 17 ] is %d \n", data1[1][17]);
 							//printf("data[1][ 18 ] is %d \n", data1[1][18]);
@@ -783,7 +784,7 @@ int decoding(ems_u32 *buffer, int size)
 					//	h707->Fill(data1[7][7]);
 					//	h709->Fill(data1[7][9]);
 
-	/*					for(int i=0; i<33;i++)
+						for(int i=0; i<33;i++)
 						{
  							Scint_qhits->Fill(scint[i],data1[7][i],1);
 							Scint_thits->Fill(scint[i],data1[8][i],1);
@@ -805,7 +806,7 @@ int decoding(ems_u32 *buffer, int size)
 
 						}
 			cout<<"Fill the histogram!"<<endl<<endl; //Filling only once per cluster data
-*/
+
 		//	}//loop scaler data which means one event complete
 		//	}//data structure complete, fill histogram
 
