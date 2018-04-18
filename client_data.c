@@ -662,7 +662,7 @@ int decoding(ems_u32 *buffer, int size)
 
           if(id==1){
                     for(int nr=0;nr<32;nr++)
-                    Si_13_hits->Fill(Si_13_strip[nr],data1[2][nr],1);
+                    Si_13_hits->Fill(Si_13_strip[nr],data1[1][nr],1);
           }
 
           if(id==2){
